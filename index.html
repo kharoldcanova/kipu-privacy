@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Kipu — Política de privacidad · Privacy policy</title>
+    <meta
+      name="description"
+      content="Política de privacidad oficial de Kipu, la aplicación de finanzas personales que funciona sin cuentas y guarda tus datos en tu dispositivo. Disponible en español e inglés."
+    />
+
+    <link rel="canonical" href="https://kharoldcanova.github.io/kipu-privacy/" />
+    <link
+      rel="alternate"
+      hreflang="es"
+      href="https://kharoldcanova.github.io/kipu-privacy/privacy-policy/es/"
+    />
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://kharoldcanova.github.io/kipu-privacy/privacy-policy/en/"
+    />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://kharoldcanova.github.io/kipu-privacy/"
+    />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Kipu" />
+    <meta
+      property="og:title"
+      content="Kipu — Política de privacidad / Privacy policy"
+    />
+    <meta
+      property="og:description"
+      content="Cómo trata Kipu tu información: almacenamiento local, sin cuentas de usuario y sin servidores propios. Español e inglés."
+    />
+    <meta
+      property="og:url"
+      content="https://kharoldcanova.github.io/kipu-privacy/"
+    />
+    <meta
+      property="og:image"
+      content="https://kharoldcanova.github.io/kipu-privacy/assets/images/og-image.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/images/favicon-32.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="assets/images/apple-touch-icon.png"
+    />
+
+    <meta
+      name="theme-color"
+      content="#F5F3EE"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#0B100E"
+      media="(prefers-color-scheme: dark)"
+    />
+
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <script>
+      /* Evita el destello de tema incorrecto: aplica la preferencia guardada. */
+      try {
+        var storedTheme = window.localStorage.getItem('kipu-privacy-theme');
+        if (storedTheme === 'dark' || storedTheme === 'light') {
+          document.documentElement.setAttribute('data-theme', storedTheme);
+        }
+      } catch (error) {}
+    </script>
+  </head>
+
+  <body>
+    <a class="skip" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header">
+      <div class="shell site-header__inner">
+        <a class="brand" href="./" aria-label="Kipu — inicio">
+          <img
+            class="brand__mark"
+            src="assets/images/khipu-mark.svg"
+            alt=""
+            width="30"
+            height="30"
+          />
+          <span class="brand__name">Kipu</span>
+          <span class="brand__divider" aria-hidden="true"></span>
+          <span class="brand__section">Privacidad</span>
+        </a>
+
+        <div class="header-actions">
+          <button
+            id="theme-toggle"
+            class="icon-btn theme-toggle"
+            type="button"
+            aria-pressed="false"
+            aria-label="Cambiar de tema"
+            data-label-dark="Cambiar a tema oscuro"
+            data-label-light="Cambiar a tema claro"
+          >
+            <svg
+              class="icon-moon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" />
+            </svg>
+            <svg
+              class="icon-sun"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <circle cx="12" cy="12" r="4.2" />
+              <path
+                d="M12 2.5v2.2M12 19.3v2.2M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"
+              />
+            </svg>
+            <span class="sr-only theme-toggle__label">Cambiar de tema</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <section class="hero">
+        <div class="shell">
+          <div class="hero__card">
+            <img
+              class="hero__mark"
+              src="assets/images/khipu-mark.svg"
+              alt="Marca de Kipu: una billetera atravesada por cuerdas y nudos de un khipu"
+              width="132"
+              height="132"
+            />
+            <div>
+              <p class="eyebrow">Documento legal · Legal document</p>
+              <h1>Política de privacidad</h1>
+              <p class="hero__lede">
+                Cómo trata Kipu tu información, dónde se guarda y en qué casos
+                puede salir de tu dispositivo.
+                <span lang="en"
+                  >How Kipu handles your information, where it is stored, and
+                  when it may leave your device.</span
+                >
+              </p>
+              <div class="cord" aria-hidden="true"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="shell" aria-labelledby="idioma">
+        <h2 id="idioma" class="sr-only">Elegí tu idioma · Choose your language</h2>
+        <ul class="choices">
+          <li>
+            <a class="choice" href="privacy-policy/es/" hreflang="es" lang="es">
+              <span class="choice__lang">Español</span>
+              <span class="choice__title">Política de privacidad</span>
+              <span class="choice__desc"
+                >Información completa sobre datos, almacenamiento local,
+                compras, copias de seguridad y eliminación.</span
+              >
+              <span class="choice__arrow">Leer en español →</span>
+            </a>
+          </li>
+          <li>
+            <a class="choice" href="privacy-policy/en/" hreflang="en" lang="en">
+              <span class="choice__lang">English</span>
+              <span class="choice__title">Privacy policy</span>
+              <span class="choice__desc"
+                >Full details on data, local storage, purchases, backups and
+                deletion.</span
+              >
+              <span class="choice__arrow">Read in English →</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="shell" aria-labelledby="resumen-sitio">
+        <div class="callout">
+          <p class="callout__title" id="resumen-sitio">
+            Antes de empezar · Before you start
+          </p>
+          <ul>
+            <li>
+              Kipu guarda tus datos financieros en tu dispositivo. No hay
+              cuentas de usuario ni servidores de Kipu.
+            </li>
+            <li>
+              La información solo sale del dispositivo cuando exportás una copia
+              de seguridad o a través de servicios del sistema y de la tienda de
+              aplicaciones.
+            </li>
+            <li>
+              Este sitio es estático: no usa cookies, analítica ni formularios, y
+              no recopila datos de quienes lo visitan.
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell site-footer__inner">
+        <div>
+          <p class="site-footer__brand">
+            <img
+              src="assets/images/khipu-mark.svg"
+              alt=""
+              width="20"
+              height="20"
+            />
+            <span>Kipu</span>
+          </p>
+          <p>
+            Aplicación de finanzas personales con funcionamiento sin conexión.
+          </p>
+          <p class="site-footer__legal">
+            Este documento no constituye asesoramiento jurídico.
+          </p>
+        </div>
+        <nav aria-label="Enlaces del sitio">
+          <a href="privacy-policy/es/" hreflang="es" lang="es">Español</a>
+          <a href="privacy-policy/en/" hreflang="en" lang="en">English</a>
+          <a href="https://github.com/kharoldcanova/kipu-privacy">Repositorio</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>

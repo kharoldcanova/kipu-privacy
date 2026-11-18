@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Política de privacidad · Kipu</title>
+    <meta
+      name="description"
+      content="Política de privacidad de Kipu: qué información maneja la aplicación, dónde se almacena en el dispositivo, qué operaciones usan la red, cómo funcionan las copias de seguridad y cómo se eliminan los datos."
+    />
+
+    <link
+      rel="canonical"
+      href="https://kharoldcanova.github.io/kipu-privacy/privacy-policy/es/"
+    />
+    <link
+      rel="alternate"
+      hreflang="es"
+      href="https://kharoldcanova.github.io/kipu-privacy/privacy-policy/es/"
+    />
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://kharoldcanova.github.io/kipu-privacy/privacy-policy/en/"
+    />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://kharoldcanova.github.io/kipu-privacy/privacy-policy/es/"
+    />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Kipu" />
+    <meta property="og:title" content="Política de privacidad · Kipu" />
+    <meta
+      property="og:description"
+      content="Cómo trata Kipu tu información: almacenamiento local, sin cuentas de usuario y sin servidores propios."
+    />
+    <meta
+      property="og:url"
+      content="https://kharoldcanova.github.io/kipu-privacy/privacy-policy/es/"
+    />
+    <meta
+      property="og:image"
+      content="https://kharoldcanova.github.io/kipu-privacy/assets/images/og-image.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../../assets/images/favicon-32.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="../../assets/images/apple-touch-icon.png"
+    />
+
+    <meta
+      name="theme-color"
+      content="#F5F3EE"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#0B100E"
+      media="(prefers-color-scheme: dark)"
+    />
+
+    <link rel="stylesheet" href="../../assets/css/styles.css" />
+
+    <script>
+      /* Evita el destello de tema incorrecto: aplica la preferencia guardada. */
+      try {
+        var storedTheme = window.localStorage.getItem('kipu-privacy-theme');
+        if (storedTheme === 'dark' || storedTheme === 'light') {
+          document.documentElement.setAttribute('data-theme', storedTheme);
+        }
+      } catch (error) {}
+    </script>
+  </head>
+
+  <body>
+    <a class="skip" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header">
+      <div class="shell site-header__inner">
+        <a class="brand" href="../../" aria-label="Kipu — inicio">
+          <img
+            class="brand__mark"
+            src="../../assets/images/khipu-mark.svg"
+            alt=""
+            width="30"
+            height="30"
+          />
+          <span class="brand__name">Kipu</span>
+          <span class="brand__divider" aria-hidden="true"></span>
+          <span class="brand__section">Privacidad</span>
+        </a>
+
+        <nav class="site-nav" aria-label="Navegación principal">
+          <a href="../../">Inicio</a>
+          <a href="#s04">Datos</a>
+          <a href="#s09">Copias</a>
+          <a href="#s16">Contacto</a>
+        </nav>
+
+        <div class="header-actions">
+          <div class="lang" role="group" aria-label="Idioma del documento">
+            <a href="./" aria-current="page" hreflang="es" lang="es">ES</a>
+            <a
+              href="../en/"
+              data-lang-base="../en/"
+              hreflang="en"
+              lang="en"
+              title="Read this policy in English"
+              >EN</a
+            >
+          </div>
+
+          <button
+            id="theme-toggle"
+            class="icon-btn theme-toggle"
+            type="button"
+            aria-pressed="false"
+            aria-label="Cambiar de tema"
+            data-label-dark="Cambiar a tema oscuro"
+            data-label-light="Cambiar a tema claro"
+          >
+            <svg
+              class="icon-moon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" />
+            </svg>
+            <svg
+              class="icon-sun"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <circle cx="12" cy="12" r="4.2" />
+              <path
+                d="M12 2.5v2.2M12 19.3v2.2M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"
+              />
+            </svg>
+            <span class="sr-only theme-toggle__label">Cambiar de tema</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="contenido" class="shell">
+      <div class="doc">
+        <nav class="toc" aria-labelledby="toc-title">
+          <p class="toc__title" id="toc-title">Índice</p>
+          <ol>
+            <li><a href="#s01"><span class="num">01</span> Presentación</a></li>
+            <li><a href="#s02"><span class="num">02</span> Responsable</a></li>
+            <li><a href="#s03"><span class="num">03</span> Alcance</a></li>
+            <li><a href="#s04"><span class="num">04</span> Información que maneja Kipu</a></li>
+            <li><a href="#s05"><span class="num">05</span> Finalidades</a></li>
+            <li><a href="#s06"><span class="num">06</span> Almacenamiento local</a></li>
+            <li><a href="#s07"><span class="num">07</span> Comunicaciones</a></li>
+            <li><a href="#s08"><span class="num">08</span> Proveedores externos</a></li>
+            <li><a href="#s09"><span class="num">09</span> Copias de seguridad</a></li>
+            <li><a href="#s10"><span class="num">10</span> Conservación y eliminación</a></li>
+            <li><a href="#s11"><span class="num">11</span> Seguridad</a></li>
+            <li><a href="#s12"><span class="num">12</span> Menores</a></li>
+            <li><a href="#s13"><span class="num">13</span> Derechos y consultas</a></li>
+            <li><a href="#s14"><span class="num">14</span> Cambios</a></li>
+            <li><a href="#s15"><span class="num">15</span> Entrada en vigor</a></li>
+            <li><a href="#s16"><span class="num">16</span> Contacto</a></li>
+          </ol>
+        </nav>
+
+        <article class="prose">
+          <p class="eyebrow">Kipu · Documento legal</p>
+          <h1>Política de privacidad</h1>
+          <p class="lede">
+            Esta política explica, en lenguaje claro, qué información maneja la
+            aplicación Kipu, dónde se guarda, con qué finalidad y en qué casos
+            puede salir de tu dispositivo.
+          </p>
+
+          <div class="draft" role="note">
+            <svg
+              class="draft__icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.9"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path d="M12 3.5 22 20H2L12 3.5Z" />
+              <path d="M12 9.5v4.5M12 17h.01" />
+            </svg>
+            <p>
+              <strong>Borrador en revisión.</strong> Faltan datos del
+              responsable (identidad legal, domicilio, contacto y jurisdicción).
+              Los apartados marcados en ámbar se completan antes de publicar
+              esta política.
+            </p>
+          </div>
+
+          <section id="s01" aria-labelledby="h-s01">
+            <h2 id="h-s01"><span class="snum">01</span> Presentación</h2>
+            <p>
+              Kipu es una aplicación para registrar y organizar finanzas
+              personales. Funciona sin cuentas de usuario: no hay registro, no
+              hay inicio de sesión y no existe un servidor de Kipu donde se
+              almacene tu información.
+            </p>
+
+            <div class="callout">
+              <p class="callout__title">En tres puntos</p>
+              <ul>
+                <li>Tus datos financieros se guardan en tu dispositivo.</li>
+                <li>
+                  Kipu no tiene servidores propios ni sincronización entre
+                  dispositivos.
+                </li>
+                <li>
+                  La información solo sale del dispositivo cuando vos exportás
+                  una copia de seguridad, o a través de servicios del sistema
+                  operativo y de la tienda de aplicaciones (ver apartados 07 y
+                  08).
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <section id="s02" aria-labelledby="h-s02">
+            <h2 id="h-s02"><span class="snum">02</span> Responsable del tratamiento</h2>
+            <p>
+              El responsable de la aplicación y del tratamiento descrito en este
+              documento es:
+            </p>
+            <ul>
+              <li>Identidad legal: <span class="pending">[NOMBRE LEGAL PENDIENTE]</span></li>
+              <li>Domicilio: <span class="pending">[DOMICILIO PENDIENTE]</span></li>
+              <li>Correo de contacto: <span class="pending">[CORREO DE CONTACTO PENDIENTE]</span></li>
+              <li>Legislación aplicable: <span class="pending">[JURISDICCIÓN PENDIENTE]</span></li>
+            </ul>
+            <p>
+              «Kipu» es el nombre comercial de la aplicación y no sustituye la
+              identidad legal del responsable.
+            </p>
+          </section>
+
+          <section id="s03" aria-labelledby="h-s03">
+            <h2 id="h-s03"><span class="snum">03</span> Alcance de esta política</h2>
+            <p>Esta política se aplica a:</p>
+            <ul>
+              <li>la aplicación Kipu para Android;</li>
+              <li>este sitio web, que solo publica información legal.</li>
+            </ul>
+            <p>
+              No se aplica a servicios de terceros que el usuario utilice junto
+              con Kipu —por ejemplo, la tienda de aplicaciones o la mensajería
+              con la que se comparte una copia de seguridad—, que se rigen por
+              sus propias políticas.
+            </p>
+            <p>
+              Kipu no está disponible como servicio en la nube ni ofrece una
+              versión web pública. El repositorio del proyecto incluye
+              configuración para otras plataformas; si se distribuyera en
+              alguna, esta política se actualizaría antes de su publicación.
+            </p>
+          </section>
+
+          <section id="s04" aria-labelledby="h-s04">
+            <h2 id="h-s04"><span class="snum">04</span> Información que maneja Kipu</h2>
+            <p>
+              Kipu maneja únicamente la información que vos ingresás. No crea
+              perfiles publicitarios, no lee información de otras aplicaciones y
+              no obtiene identificadores del dispositivo para fines de
+              seguimiento.
+            </p>
+
+            <table class="table">
+              <caption>
+                La columna «¿Sale del dispositivo?» distingue el almacenamiento
+                local de la transmisión efectiva de datos.
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Dato</th>
+                  <th scope="col">Ejemplos</th>
+                  <th scope="col">Dónde se guarda</th>
+                  <th scope="col">Para qué</th>
+                  <th scope="col">¿Sale del dispositivo?</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-label="Dato">Nombre del libro</td>
+                  <td data-label="Ejemplos">
+                    El nombre que escribís al configurar tu perfil
+                  </td>
+                  <td data-label="Dónde se guarda">
+                    Base de datos local (SQLite)
+                  </td>
+                  <td data-label="Para qué">
+                    Identificar tu libro dentro de la aplicación
+                  </td>
+                  <td data-label="¿Sale del dispositivo?">
+                    No, salvo que exportes una copia de seguridad (apartado 09)
+                  </td>
+                </tr>
+                <tr>
+                  <td data-label="Dato">Cuentas financieras</td>
+                  <td data-label="Ejemplos">
+                    Nombre, tipo (efectivo, banco, tarjeta), saldo inicial y
+                    fecha de inicio
+                  </td>
+                  <td data-label="Dónde se guarda">
+                    Base de datos local (SQLite)
+                  </td>
+                  <td data-label="Para qué">Calcular saldos y patrimonio</td>
+                  <td data-label="¿Sale del dispositivo?">No (ver apartado 09)</td>
+                </tr>
+                <tr>
+                  <td data-label="Dato">Movimientos</td>
+                  <td data-label="Ejemplos">
+                    Monto, moneda, tipo (ingreso o gasto), fecha, título y nota
+                  </td>
+                  <td data-label="Dónde se guarda">
+                    Base de datos local (SQLite)
+                  </td>
+                  <td data-label="Para qué">
+                    Registro financiero, totales y gráficos
+                  </td>
+                  <td data-label="¿Sale del dispositivo?">No (ver apartado 09)</td>
+                </tr>
+                <tr>
+                  <td data-label="Dato">Transferencias</td>
+                  <td data-label="Ejemplos">
+                    Cuenta de origen, cuenta de destino, monto, fecha y nota
+                  </td>
+                  <td data-label="Dónde se guarda">
+                    Base de datos local (SQLite)
+                  </td>
+                  <td data-label="Para qué">
+                    Reflejar movimientos entre cuentas propias
+                  </td>
+                  <td data-label="¿Sale del dispositivo?">No (ver apartado 09)</td>
+                </tr>
+                <tr>
+                  <td data-label="Dato">Categorías</td>
+                  <td data-label="Ejemplos">
+                    Nombre, tipo, categoría superior y marca de deducible
+                  </td>
+                  <td data-label="Dónde se guarda">
+                    Base de datos local (SQLite)
+                  </td>
+                  <td data-label="Para qué">Clasificar movimientos</td>
+                  <td data-label="¿Sale del dispositivo?">No (ver apartado 09)</td>
+                </tr>
+                <tr>
+                  <td data-label="Dato">Recordatorios</td>
+                  <td data-label="Ejemplos">
+                    Título, monto, moneda, recurrencia y próxima fecha
+                  </td>
+                  <td data-label="Dónde se guarda">
+                    Base de datos local y notificaciones del sistema
+                  </td>
+                  <td data-label="Para qué">
+                    Avisarte de pagos próximos o vencidos
+                  </td>
+                  <td data-label="¿Sale del dispositivo?">
+                    El título puede verse en la notificación del dispositivo
+                  </td>
+                </tr>
+                <tr>
+                  <td data-label="Dato">Listas de compras</td>
+                  <td data-label="Ejemplos">
+                    Título de la lista, productos, monto estimado y prioridad
+                  </td>
+                  <td data-label="Dónde se guarda">
+                    Base de datos local (SQLite)
+                  </td>
+                  <td data-label="Para qué">
+                    Planificar compras y generar el gasto correspondiente
+                  </td>
+                  <td data-label="¿Sale del dispositivo?">No (ver apartado 09)</td>
+                </tr>
+                <tr>
+                  <td data-label="Dato">Preferencias</td>
+                  <td data-label="Ejemplos">
+                    Tema visual, si viste la introducción y cuál es tu libro
+                    activo
+                  </td>
+                  <td data-label="Dónde se guarda">
+                    Preferencias del sistema (almacenamiento privado de la app)
+                  </td>
+                  <td data-label="Para qué">Recordar tu configuración</td>
+                  <td data-label="¿Sale del dispositivo?">No</td>
+                </tr>
+                <tr>
+                  <td data-label="Dato">Estado de la suscripción</td>
+                  <td data-label="Ejemplos">
+                    Si la compra Premium está activa en este dispositivo
+                  </td>
+                  <td data-label="Dónde se guarda">
+                    Preferencias del sistema (almacenamiento privado de la app)
+                  </td>
+                  <td data-label="Para qué">Desbloquear funciones de pago</td>
+                  <td data-label="¿Sale del dispositivo?">
+                    No; el pago lo procesa la tienda de aplicaciones (apartado
+                    08)
+                  </td>
+                </tr>
+                <tr>
+                  <td data-label="Dato">Copia de seguridad</td>
+                  <td data-label="Ejemplos">
+                    Archivo JSON con el contenido completo de la base
+                  </td>
+                  <td data-label="Dónde se guarda">
+                    Almacenamiento de la app y destino que elijas al compartir
+                  </td>
+                  <td data-label="Para qué">Portabilidad y respaldo</td>
+                  <td data-label="¿Sale del dispositivo?">
+                    Sí, solo cuando decidís compartirla (apartado 09)
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h3>Información que Kipu no solicita</h3>
+            <p>
+              Kipu no pide ni guarda correo electrónico, número de teléfono,
+              dirección, documento de identidad, contactos, ubicación, fotos,
+              cámara, micrófono ni datos de salud. Tampoco solicita fecha de
+              nacimiento.
+            </p>
+
+            <div class="note">
+              <strong>Nota sobre el esquema de datos.</strong> La base de datos
+              incluye tablas de clientes (nombre y dato de contacto) y de
+              facturas que en esta versión <em>no tienen pantalla de carga en la
+              aplicación</em>. Si se habilitaran, esta política se actualizaría
+              antes de su publicación, porque esos campos podrían contener datos
+              de terceros.
+            </div>
+          </section>
+
+          <section id="s05" aria-labelledby="h-s05">
+            <h2 id="h-s05"><span class="snum">05</span> Finalidades del tratamiento</h2>
+            <p>La información se utiliza exclusivamente para:</p>
+            <ul>
+              <li>mostrar tus cuentas, saldos, movimientos y recordatorios;</li>
+              <li>
+                calcular totales, gráficos y proyecciones a partir de tus propios
+                datos, en el dispositivo;
+              </li>
+              <li>programar y mostrar recordatorios de pagos;</li>
+              <li>recordar tus preferencias de uso;</li>
+              <li>gestionar la compra y la restauración de la suscripción;</li>
+              <li>
+                generar la copia de seguridad cuando vos lo pedís y restaurarla
+                cuando vos lo decidís.
+              </li>
+            </ul>
+            <p>
+              Kipu no utiliza tus datos para publicidad, perfilado comercial,
+              venta a terceros ni elaboración de perfiles en servidores.
+            </p>
+          </section>
+
+          <section id="s06" aria-labelledby="h-s06">
+            <h2 id="h-s06"><span class="snum">06</span> Almacenamiento local y funcionamiento sin conexión</h2>
+            <p>
+              Toda la información financiera se almacena en una base de datos
+              SQLite dentro del almacenamiento privado de la aplicación. En
+              condiciones normales de uso, otras aplicaciones del dispositivo no
+              pueden leer ese archivo.
+            </p>
+            <ul>
+              <li>
+                Los datos permanecen entre reinicios del dispositivo y se
+                conservan hasta que los eliminás o desinstalás la aplicación.
+              </li>
+              <li>
+                El registro y la consulta de información funcionan sin conexión a
+                Internet.
+              </li>
+              <li>
+                La conexión solo es necesaria para comprar o restaurar la
+                suscripción, y para las copias de seguridad que gestiona el
+                sistema operativo.
+              </li>
+            </ul>
+          </section>
+
+          <section id="s07" aria-labelledby="h-s07">
+            <h2 id="h-s07"><span class="snum">07</span> Comunicaciones y transmisiones de información</h2>
+            <p>
+              El código de Kipu no contiene llamadas a servidores propios ni
+              envía información financiera a servicios externos. No hay
+              sincronización entre dispositivos, ni respaldo en la nube de Kipu,
+              ni telemetría de uso.
+            </p>
+            <p>
+              Existen tres situaciones con comunicación de red. Ninguna de ellas
+              transmite tus movimientos, saldos, cuentas ni recordatorios:
+            </p>
+            <ol>
+              <li>
+                <strong>Compra o restauración de la suscripción.</strong> Kipu
+                consulta a la tienda de aplicaciones el identificador del
+                producto y la información necesaria para procesar el pago. La
+                tienda recibe esos datos y el resultado de la operación; Kipu
+                solo guarda si la compra quedó activa.
+              </li>
+              <li>
+                <strong>Copia de seguridad del sistema operativo.</strong> Si
+                tenés activada la copia de seguridad de Android, el sistema puede
+                respaldar los datos privados de las aplicaciones —incluida la
+                base de datos de Kipu— en tu cuenta de Google. Ese respaldo lo
+                controla el sistema operativo y Google, no Kipu, y podés
+                desactivarlo en los ajustes de tu dispositivo.
+              </li>
+              <li>
+                <strong>Versiones para navegador (no publicadas).</strong> Las
+                compilaciones para navegador, que hoy se usan solo para
+                validación interna y no se distribuyen, cargan recursos del motor
+                Flutter desde servidores de Google.
+              </li>
+            </ol>
+            <p>
+              <strong>Permiso de red.</strong> La aplicación declara acceso a
+              Internet porque lo requiere el componente de compras de Google
+              Play. Kipu no utiliza ese permiso para enviar información
+              financiera.
+            </p>
+          </section>
+
+          <section id="s08" aria-labelledby="h-s08">
+            <h2 id="h-s08"><span class="snum">08</span> Servicios y proveedores externos</h2>
+            <p>
+              Kipu no integra servicios de analítica, publicidad, informes de
+              fallos ni seguimiento. Solo intervienen los siguientes terceros:
+            </p>
+
+            <table class="table">
+              <caption>
+                Kipu no tiene relación contractual con los destinatarios que vos
+                elegís al compartir una copia de seguridad.
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Proveedor</th>
+                  <th scope="col">Servicio</th>
+                  <th scope="col">Información que interviene</th>
+                  <th scope="col">Cuándo</th>
+                  <th scope="col">Dónde se trata</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-label="Proveedor">Google Play (Google LLC)</td>
+                  <td data-label="Servicio">Compras dentro de la aplicación</td>
+                  <td data-label="Información">
+                    Datos de la transacción y de la cuenta de Google del usuario;
+                    identificador del producto
+                  </td>
+                  <td data-label="Cuándo">
+                    Al comprar, restaurar o consultar la suscripción
+                  </td>
+                  <td data-label="Dónde se trata">
+                    Servidores de Google, según su
+                    <a
+                      href="https://policies.google.com/privacy"
+                      rel="noopener external"
+                      >política de privacidad</a
+                    >
+                  </td>
+                </tr>
+                <tr>
+                  <td data-label="Proveedor">Sistema operativo Android (Google)</td>
+                  <td data-label="Servicio">Copia de seguridad del dispositivo</td>
+                  <td data-label="Información">
+                    Datos privados de la aplicación, incluida la base de datos
+                    local
+                  </td>
+                  <td data-label="Cuándo">
+                    De forma automática, solo si el usuario tiene activada esa
+                    función
+                  </td>
+                  <td data-label="Dónde se trata">
+                    Cuenta de Google del usuario, según su configuración y sus
+                    políticas
+                  </td>
+                </tr>
+                <tr>
+                  <td data-label="Proveedor">
+                    Destinatario elegido por el usuario
+                  </td>
+                  <td data-label="Servicio">Compartir archivo</td>
+                  <td data-label="Información">
+                    Contenido completo de la copia de seguridad
+                  </td>
+                  <td data-label="Cuándo">
+                    Solo cuando el usuario decide exportar y compartir
+                  </td>
+                  <td data-label="Dónde se trata">
+                    Aplicación o servicio que el usuario seleccione
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <p>
+              Los enlaces a políticas de terceros son externos y se abren fuera
+              de este sitio.
+            </p>
+          </section>
+
+          <section id="s09" aria-labelledby="h-s09">
+            <h2 id="h-s09"><span class="snum">09</span> Copias de seguridad, exportación e importación</h2>
+            <p>
+              La copia de seguridad se genera únicamente cuando la pedís desde
+              Ajustes. Kipu no envía el archivo a ningún servidor.
+            </p>
+
+            <h3>Qué contiene la copia</h3>
+            <p>La copia es un archivo JSON con:</p>
+            <ul>
+              <li>libros y sus monedas base;</li>
+              <li>cuentas, categorías, movimientos y transferencias;</li>
+              <li>recordatorios y sus fechas;</li>
+              <li>listas de compras y sus ítems;</li>
+              <li>tasas de cambio, monedas;</li>
+              <li>
+                tablas de clientes y facturas, que hoy no tienen pantalla de
+                carga y normalmente estarán vacías.
+              </li>
+            </ul>
+
+            <h3>Qué debés tener en cuenta</h3>
+            <ul>
+              <li>
+                <strong>El archivo no está cifrado ni firmado digitalmente.</strong>
+                Cualquier persona o aplicación que lo obtenga puede leer su
+                contenido completo.
+              </li>
+              <li>
+                Además de la copia que compartís, la aplicación guarda otra en su
+                almacenamiento privado con un nombre similar a
+                <code>mi_wallet_backup_&lt;número&gt;.json</code>. Kipu no la
+                elimina automáticamente.
+              </li>
+              <li>
+                Al compartirla, el archivo se entrega a la aplicación o servicio
+                que elijas (por ejemplo, mensajería o correo). Desde ese momento
+                se rige por la política de ese servicio.
+              </li>
+              <li>
+                La eliminación total de datos de Kipu no elimina estos archivos
+                exportados ni las copias que hayas compartido.
+              </li>
+            </ul>
+
+            <h3>Importación y restauración</h3>
+            <p>
+              Al importar un archivo, Kipu verifica su estructura completa antes
+              de modificar la base de datos. Si la validación falla, no se
+              modifica ningún dato. Si es válida, la copia
+              <strong>reemplaza toda la información actual</strong>. El archivo
+              importado no se elimina de su ubicación original.
+            </p>
+
+            <div class="note">
+              <strong>Recomendación.</strong> Guardá las copias en un lugar
+              seguro, compartilas solo por canales de confianza y eliminá las que
+              ya no necesites.
+            </div>
+          </section>
+
+          <section id="s10" aria-labelledby="h-s10">
+            <h2 id="h-s10"><span class="snum">10</span> Conservación y eliminación de datos</h2>
+            <p>
+              Los datos se conservan en tu dispositivo mientras la aplicación
+              esté instalada y no los elimines. Kipu no mantiene copias en
+              servidores propios.
+            </p>
+
+            <h3>Qué podés eliminar desde la aplicación</h3>
+            <ul>
+              <li>movimientos, uno por uno;</li>
+              <li>transferencias;</li>
+              <li>recordatorios, que también cancelan su notificación;</li>
+              <li>
+                categorías, junto con sus subcategorías; los movimientos que las
+                usaban quedan sin categoría;
+              </li>
+              <li>
+                listas de compras y sus ítems; los gastos ya generados se
+                conservan como historial.
+              </li>
+            </ul>
+
+            <h3>Eliminación total de datos</h3>
+            <p>
+              Kipu incluye una opción en Ajustes → Datos y seguridad →
+              «Eliminar todos los datos». Al confirmarla, la aplicación:
+            </p>
+            <ul>
+              <li>
+                elimina los libros, cuentas, movimientos, transferencias,
+                categorías, clientes, facturas, recordatorios, listas de compras
+                y demás registros locales;
+              </li>
+              <li>cancela las notificaciones programadas;</li>
+              <li>reinicia el estado de onboarding y navegación;</li>
+              <li>
+                conserva la preferencia visual del tema y el indicador local de
+                Premium;
+              </li>
+              <li>
+                conserva los archivos JSON exportados previamente y cualquier
+                copia guardada fuera de la aplicación.
+              </li>
+            </ul>
+            <p>
+              La operación se ejecuta de forma transaccional: si ocurre un error,
+              la base de datos conserva su estado anterior. Si alguna operación
+              posterior falla, la aplicación informa que el resultado quedó
+              parcial y permite reintentar.
+            </p>
+            <p>
+              La eliminación total no cancela compras ni suscripciones
+              gestionadas por Google Play. El derecho Premium puede consultarse
+              o restaurarse mediante el mecanismo existente de la aplicación.
+            </p>
+            <p>
+              La operación no elimina copias administradas por Android Auto
+              Backup ni archivos compartidos con otros servicios; esas copias
+              siguen el ciclo de vida de Android y del servicio que las recibió.
+            </p>
+
+            <h3>Limitaciones actuales</h3>
+            <ul>
+              <li>
+                Las cuentas financieras creadas (efectivo, banco, tarjeta) se
+                pueden editar, pero no eliminar individualmente desde la
+                aplicación en esta versión.
+              </li>
+              <li>
+                Los archivos de copia de seguridad no se eliminan desde la
+                aplicación, ni siquiera mediante la eliminación total.
+              </li>
+            </ul>
+
+            <h3>Desinstalación y archivos externos</h3>
+            <p>
+              Desinstalar la aplicación elimina la base de datos local y las
+              preferencias del dispositivo. <strong>No elimina</strong> los
+              archivos que hayas compartido o guardado fuera de la aplicación
+              (mensajería, correo, almacenamiento en la nube, computadora).
+            </p>
+            <p>
+              Las copias de seguridad del sistema operativo pueden conservarse
+              después de desinstalar la aplicación, según la configuración del
+              dispositivo y las políticas de Google.
+            </p>
+            <p>
+              No existen cuentas de usuario que eliminar. Si necesitás orientación
+              para borrar toda tu información, escribinos a
+              <span class="pending">[CORREO DE CONTACTO PENDIENTE]</span>.
+            </p>
+          </section>
+
+          <section id="s11" aria-labelledby="h-s11">
+            <h2 id="h-s11"><span class="snum">11</span> Seguridad de la información</h2>
+            <p>Medidas implementadas en la versión actual:</p>
+            <ul>
+              <li>
+                almacenamiento dentro del área privada de la aplicación, sin
+                permisos de acceso al almacenamiento externo;
+              </li>
+              <li>
+                validación completa de los archivos de copia antes de importarlos
+                y reemplazo en una única operación, de modo que una restauración
+                fallida no deja datos a medias;
+              </li>
+              <li>
+                ausencia de registro de información financiera en registros de
+                diagnóstico de la aplicación;
+              </li>
+              <li>ausencia de envío de datos financieros por red.</li>
+            </ul>
+
+            <p>Limitaciones que debés conocer:</p>
+            <ul>
+              <li>
+                <strong>La base de datos no tiene cifrado adicional.</strong> Es
+                un archivo SQLite protegido por el aislamiento del sistema
+                operativo.
+              </li>
+              <li><strong>Las copias de seguridad no están cifradas.</strong></li>
+              <li>
+                La aplicación no tiene bloqueo por contraseña ni por biometría:
+                quien tenga el dispositivo desbloqueado puede abrirla.
+              </li>
+            </ul>
+
+            <p>
+              Ninguna medida elimina por completo el riesgo. El acceso físico al
+              dispositivo desbloqueado y la circulación de copias de seguridad
+              por canales inseguros son los principales escenarios de exposición.
+            </p>
+          </section>
+
+          <section id="s12" aria-labelledby="h-s12">
+            <h2 id="h-s12"><span class="snum">12</span> Privacidad de menores</h2>
+            <p>
+              Kipu es una herramienta de finanzas personales no dirigida a
+              menores de 13 años. La aplicación no solicita fecha de nacimiento
+              ni realiza verificaciones de edad.
+            </p>
+            <p>
+              Como Kipu no envía información al responsable ni crea cuentas de
+              usuario, no se recopilan datos de menores en servidores. Si un
+              menor utiliza la aplicación, su información permanece en el
+              dispositivo, igual que la de cualquier otra persona.
+            </p>
+            <p>
+              Los padres, madres o tutores pueden eliminar esa información
+              desinstalando la aplicación y borrando los archivos de copia que se
+              hayan exportado.
+            </p>
+          </section>
+
+          <section id="s13" aria-labelledby="h-s13">
+            <h2 id="h-s13"><span class="snum">13</span> Tus derechos y consultas de privacidad</h2>
+            <p>
+              Como los datos están en tu dispositivo y no en servidores del
+              responsable, ejercés el acceso, la rectificación y la eliminación
+              directamente en la aplicación:
+            </p>
+            <ul>
+              <li>acceso: las pantallas de la aplicación muestran tus datos;</li>
+              <li>rectificación: podés editar cuentas, movimientos, categorías y recordatorios;</li>
+              <li>eliminación: podés borrar registros individuales (apartado 10).</li>
+            </ul>
+            <p>
+              El responsable no puede consultar, exportar ni borrar tus datos por
+              vos, porque no tiene acceso a ellos.
+            </p>
+            <p>
+              Si tenés una consulta sobre esta política o sobre el tratamiento de
+              información, escribinos a
+              <span class="pending">[CORREO DE CONTACTO PENDIENTE]</span>. También
+              podés presentar un reclamo ante la autoridad de protección de datos
+              competente en
+              <span class="pending">[JURISDICCIÓN PENDIENTE]</span>.
+            </p>
+          </section>
+
+          <section id="s14" aria-labelledby="h-s14">
+            <h2 id="h-s14"><span class="snum">14</span> Cambios en esta política</h2>
+            <p>
+              Esta política puede actualizarse para reflejar cambios en la
+              aplicación o en la normativa aplicable. La versión vigente estará
+              siempre publicada en esta dirección, con la fecha de última
+              actualización.
+            </p>
+            <p>
+              Si un cambio es sustancial —por ejemplo, si se incorporara un
+              servicio que reciba datos fuera del dispositivo—, se anunciará en
+              esta página y en la ficha de la tienda de aplicaciones antes de su
+              entrada en vigor.
+            </p>
+          </section>
+
+          <section id="s15" aria-labelledby="h-s15">
+            <h2 id="h-s15"><span class="snum">15</span> Entrada en vigor</h2>
+            <ul>
+              <li>Última actualización del borrador: 17 de noviembre de 2026.</li>
+              <li>
+                Fecha de entrada en vigor:
+                <span class="pending">[FECHA DE ENTRADA EN VIGOR PENDIENTE]</span>
+              </li>
+            </ul>
+            <p>
+              Este documento describe prácticas verificadas de la aplicación y no
+              constituye asesoramiento jurídico.
+            </p>
+          </section>
+
+          <section id="s16" aria-labelledby="h-s16">
+            <h2 id="h-s16"><span class="snum">16</span> Contacto</h2>
+            <p>
+              Para consultas relacionadas con esta política o con el tratamiento
+              de información:
+            </p>
+            <ul>
+              <li>Correo: <span class="pending">[CORREO DE CONTACTO PENDIENTE]</span></li>
+              <li>Responsable: <span class="pending">[NOMBRE LEGAL PENDIENTE]</span></li>
+              <li>Domicilio: <span class="pending">[DOMICILIO PENDIENTE]</span></li>
+            </ul>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell site-footer__inner">
+        <div>
+          <p class="site-footer__brand">
+            <img
+              src="../../assets/images/khipu-mark.svg"
+              alt=""
+              width="20"
+              height="20"
+            />
+            <span>Kipu</span>
+          </p>
+          <p>Política de privacidad · Última actualización: 17 de noviembre de 2026.</p>
+          <p class="site-footer__legal">
+            Este documento no constituye asesoramiento jurídico.
+          </p>
+        </div>
+        <nav aria-label="Enlaces del sitio">
+          <a href="../../">Inicio</a>
+          <a href="../en/" hreflang="en" lang="en">English</a>
+          <a href="#s16">Contacto</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="../../assets/js/main.js" defer></script>
+  </body>
+</html>

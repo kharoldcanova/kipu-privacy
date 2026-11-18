@@ -1,0 +1,11 @@
+# Archivos generados por el sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Editores
+.vscode/
+.idea/
+*.swp
