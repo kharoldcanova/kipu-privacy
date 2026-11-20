@@ -3,8 +3,9 @@
    JavaScript mínimo, sin dependencias, sin analítica y sin red.
    Responsabilidades:
      1. Alternar tema claro/oscuro (preferencia del sistema por defecto).
-     2. Resaltar la sección actual en el índice.
-     3. Conservar la sección al cambiar de idioma.
+     2. Plegar el índice en pantallas angostas.
+     3. Resaltar la sección actual en el índice.
+     4. Conservar la sección al cambiar de idioma.
    ========================================================================== */
 
 (function () {
@@ -90,6 +91,35 @@
     } else if (typeof query.addListener === 'function') {
       query.addListener(onSystemChange);
     }
+  }
+
+  /* ------------------------------------------- Índice plegable ----- */
+
+  /* En pantallas angostas el índice empieza plegado para que el texto quede
+     a la vista; en escritorio siempre está abierto. Sin JS queda abierto. */
+  var tocDetails = document.querySelector('.toc__details');
+  if (tocDetails && window.matchMedia) {
+    var wide = window.matchMedia('(min-width: 1000px)');
+    var syncToc = function () {
+      if (wide.matches) tocDetails.open = true;
+    };
+    if (!wide.matches) tocDetails.open = false;
+    if (typeof wide.addEventListener === 'function') {
+      wide.addEventListener('change', syncToc);
+    } else if (typeof wide.addListener === 'function') {
+      wide.addListener(syncToc);
+    }
+    tocDetails.addEventListener('click', function (event) {
+      if (wide.matches && event.target.closest('summary')) event.preventDefault();
+    });
+    Array.prototype.forEach.call(
+      tocDetails.querySelectorAll('a[href^="#"]'),
+      function (link) {
+        link.addEventListener('click', function () {
+          if (!wide.matches) tocDetails.open = false;
+        });
+      }
+    );
   }
 
   /* --------------------------------------------------- Índice activo ----- */

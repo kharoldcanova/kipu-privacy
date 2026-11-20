@@ -3,432 +3,1113 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Privacy policy · Kipu</title>
-    <meta name="description" content="Kipu privacy policy: what information the app handles, how it is stored on your device, which operations use the network, how backups work and how data is deleted." />
-    <link rel="canonical" href="https://kharoldcanova.github.io/kipu-privacy/privacy-policy/en/" />
-    <link rel="alternate" hreflang="es" href="https://kharoldcanova.github.io/kipu-privacy/privacy-policy/es/" />
-    <link rel="alternate" hreflang="en" href="https://kharoldcanova.github.io/kipu-privacy/privacy-policy/en/" />
-    <link rel="alternate" hreflang="x-default" href="https://kharoldcanova.github.io/kipu-privacy/privacy-policy/es/" />
+    <meta
+      name="description"
+      content="Kipu privacy policy: what information the app handles, how voice entry, receipt scanning and bank statement import work offline, what Google Play is involved in, and how data is deleted."
+    />
+
+    <link
+      rel="canonical"
+      href="https://kharoldcanova.github.io/kipu-privacy/privacy-policy/en/"
+    />
+    <link
+      rel="alternate"
+      hreflang="es"
+      href="https://kharoldcanova.github.io/kipu-privacy/privacy-policy/es/"
+    />
+    <link
+      rel="alternate"
+      hreflang="en"
+      href="https://kharoldcanova.github.io/kipu-privacy/privacy-policy/en/"
+    />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href="https://kharoldcanova.github.io/kipu-privacy/privacy-policy/es/"
+    />
+
     <meta property="og:type" content="article" />
     <meta property="og:site_name" content="Kipu" />
     <meta property="og:title" content="Privacy policy · Kipu" />
-    <meta property="og:description" content="How Kipu handles your information: local storage, no user accounts and no servers of our own." />
-    <meta property="og:url" content="https://kharoldcanova.github.io/kipu-privacy/privacy-policy/en/" />
-    <meta property="og:image" content="https://kharoldcanova.github.io/kipu-privacy/assets/images/og-image.png" />
+    <meta
+      property="og:description"
+      content="How Kipu handles your information: data on your device, no user accounts and no Kipu servers."
+    />
+    <meta
+      property="og:url"
+      content="https://kharoldcanova.github.io/kipu-privacy/privacy-policy/en/"
+    />
+    <meta
+      property="og:image"
+      content="https://kharoldcanova.github.io/kipu-privacy/assets/images/og-image.png"
+    />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="The Kipu mark, a khipu on an ink background, next to the title Privacy policy"
+    />
     <meta property="og:locale" content="en_US" />
-    <meta property="og:locale:alternate" content="es_ES" />
+    <meta property="og:locale:alternate" content="es_419" />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/favicon-32.png" />
-    <link rel="apple-touch-icon" href="../../assets/images/apple-touch-icon.png" />
-    <meta name="theme-color" content="#F5F3EE" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#0B100E" media="(prefers-color-scheme: dark)" />
+
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="../../assets/images/khipu-mark.svg"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../../assets/images/favicon-32.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="../../assets/images/apple-touch-icon.png"
+    />
+
+    <meta
+      name="theme-color"
+      content="#F5F3EE"
+      media="(prefers-color-scheme: light)"
+    />
+    <meta
+      name="theme-color"
+      content="#0B100E"
+      media="(prefers-color-scheme: dark)"
+    />
+
     <link rel="stylesheet" href="../../assets/css/styles.css" />
-    <script>try{var t=window.localStorage.getItem('kipu-privacy-theme');if(t==='dark'||t==='light')document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+
+    <script>
+      /* Avoids a flash of the wrong theme: applies the saved preference. */
+      try {
+        var storedTheme = window.localStorage.getItem('kipu-privacy-theme');
+        if (storedTheme === 'dark' || storedTheme === 'light') {
+          document.documentElement.setAttribute('data-theme', storedTheme);
+        }
+      } catch (error) {}
+    </script>
   </head>
+
   <body>
     <a class="skip" href="#content">Skip to content</a>
+
     <header class="site-header">
       <div class="shell site-header__inner">
         <a class="brand" href="../../" aria-label="Kipu — home">
-          <img class="brand__mark" src="../../assets/images/khipu-mark.svg" alt="" width="30" height="30" />
+          <img
+            class="brand__mark"
+            src="../../assets/images/khipu-mark.svg"
+            alt=""
+            width="32"
+            height="32"
+          />
           <span class="brand__name">Kipu</span>
           <span class="brand__divider" aria-hidden="true"></span>
           <span class="brand__section">Privacy</span>
         </a>
-        <nav class="site-nav" aria-label="Primary navigation">
+
+        <nav class="site-nav" aria-label="Main navigation">
           <a href="../../">Home</a>
           <a href="#s04">Data</a>
-          <a href="#s09">Backups</a>
-          <a href="#s16">Contact</a>
+          <a href="#s11">Backups</a>
+          <a href="#s18">Contact</a>
         </nav>
+
         <div class="header-actions">
           <div class="lang" role="group" aria-label="Document language">
-            <a href="../es/" data-lang-base="../es/" hreflang="es" lang="es">ES</a>
+            <a
+              href="../es/"
+              data-lang-base="../es/"
+              hreflang="es"
+              lang="es"
+              title="Leer esta política en español"
+              >ES</a
+            >
             <a href="./" aria-current="page" hreflang="en" lang="en">EN</a>
           </div>
-          <button id="theme-toggle" class="icon-btn theme-toggle" type="button" aria-pressed="false" aria-label="Switch theme" data-label-dark="Switch to dark theme" data-label-light="Switch to light theme">
-            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" /></svg>
-            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4.2" /><path d="M12 2.5v2.2M12 19.3v2.2M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6" /></svg>
+
+          <button
+            id="theme-toggle"
+            class="icon-btn theme-toggle"
+            type="button"
+            aria-pressed="false"
+            aria-label="Switch theme"
+            data-label-dark="Switch to dark theme"
+            data-label-light="Switch to light theme"
+          >
+            <svg
+              class="icon-moon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" />
+            </svg>
+            <svg
+              class="icon-sun"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <circle cx="12" cy="12" r="4.2" />
+              <path
+                d="M12 2.5v2.2M12 19.3v2.2M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"
+              />
+            </svg>
             <span class="sr-only theme-toggle__label">Switch theme</span>
           </button>
         </div>
       </div>
     </header>
+
     <main id="content" class="shell">
       <div class="doc">
         <nav class="toc" aria-labelledby="toc-title">
-          <p class="toc__title" id="toc-title">Contents</p>
+          <details class="toc__details" open>
+            <summary class="toc__title" id="toc-title">Contents</summary>
           <ol>
-            <li><a href="#s01"><span class="num">01</span> Presentation</a></li>
+            <li><a href="#s01"><span class="num">01</span> Introduction</a></li>
             <li><a href="#s02"><span class="num">02</span> Controller</a></li>
             <li><a href="#s03"><span class="num">03</span> Scope</a></li>
             <li><a href="#s04"><span class="num">04</span> Information Kipu handles</a></li>
             <li><a href="#s05"><span class="num">05</span> Purposes</a></li>
             <li><a href="#s06"><span class="num">06</span> Local storage</a></li>
-            <li><a href="#s07"><span class="num">07</span> Communications</a></li>
-            <li><a href="#s08"><span class="num">08</span> Third parties</a></li>
-            <li><a href="#s09"><span class="num">09</span> Backups</a></li>
-            <li><a href="#s10"><span class="num">10</span> Retention and deletion</a></li>
-            <li><a href="#s11"><span class="num">11</span> Security</a></li>
-            <li><a href="#s12"><span class="num">12</span> Children</a></li>
-            <li><a href="#s13"><span class="num">13</span> Rights and enquiries</a></li>
-            <li><a href="#s14"><span class="num">14</span> Changes</a></li>
-            <li><a href="#s15"><span class="num">15</span> Effective date</a></li>
-            <li><a href="#s16"><span class="num">16</span> Contact</a></li>
+            <li><a href="#s07"><span class="num">07</span> Voice, receipts and import</a></li>
+            <li><a href="#s08"><span class="num">08</span> Network communication</a></li>
+            <li><a href="#s09"><span class="num">09</span> Third-party services</a></li>
+            <li><a href="#s10"><span class="num">10</span> Android permissions</a></li>
+            <li><a href="#s11"><span class="num">11</span> Backups</a></li>
+            <li><a href="#s12"><span class="num">12</span> Retention and deletion</a></li>
+            <li><a href="#s13"><span class="num">13</span> Security</a></li>
+            <li><a href="#s14"><span class="num">14</span> Children</a></li>
+            <li><a href="#s15"><span class="num">15</span> Rights and questions</a></li>
+            <li><a href="#s16"><span class="num">16</span> Changes</a></li>
+            <li><a href="#s17"><span class="num">17</span> Effective date</a></li>
+            <li><a href="#s18"><span class="num">18</span> Contact</a></li>
           </ol>
+          </details>
         </nav>
+
         <article class="prose">
           <p class="eyebrow">Kipu · Legal document</p>
           <h1>Privacy policy</h1>
-          <p class="lede">This policy explains, in plain language, what information the Kipu app handles, where it is stored, for what purpose, and in which cases it may leave your device.</p>
+          <p class="lede">
+            This policy explains, in plain language, what information the Kipu
+            app handles, where it is stored, why, and when it may leave your
+            device.
+          </p>
+
           <div class="draft" role="note">
-            <svg class="draft__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 3.5 22 20H2L12 3.5Z" /><path d="M12 9.5v4.5M12 17h.01" /></svg>
-            <p><strong>Draft under review.</strong> The controller details are still pending (legal identity, address, contact email and jurisdiction). Sections marked in amber will be completed before publication.</p>
+            <svg
+              class="draft__icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.9"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path d="M12 3.5 22 20H2L12 3.5Z" />
+              <path d="M12 9.5v4.5M12 17h.01" />
+            </svg>
+            <p>
+              <strong>Draft under review.</strong> The controller's details
+              (legal identity, address, contact and jurisdiction) are still
+              missing. Items highlighted in amber will be completed before this
+              policy is published.
+            </p>
           </div>
+
           <section id="s01" aria-labelledby="h-s01">
-            <h2 id="h-s01"><span class="snum">01</span> Presentation</h2>
-            <p>Kipu is an application for recording and organising personal finances. It runs without user accounts: there is no sign-up, no sign-in, and no Kipu server where your information is stored.</p>
-            <div class="callout">
-              <p class="callout__title">In three points</p>
-              <ul>
-                <li>Your financial data is stored on your device.</li>
-                <li>Kipu has no servers of its own and no synchronisation between devices.</li>
-                <li>Information leaves the device only when you export a backup, or through services of the operating system and the app store (see sections 07 and 08).</li>
-              </ul>
-            </div>
+            <h2 id="h-s01"><span class="snum">01</span> Introduction</h2>
+            <p>
+              Kipu is an app to record, organize and understand your personal
+              finances and those of your business, in separate books. It works
+              without user accounts: there is no sign-up, no sign-in and no Kipu
+              server where your information is stored.
+            </p>
+
+            <ul class="facts" aria-label="Policy summary">
+              <li>
+                <strong>Your data stays on your device</strong>
+                Kipu stores your financial information in the app's private
+                storage. It has no servers of its own and no sync.
+              </li>
+              <li>
+                <strong>No account</strong>
+                You don't need to sign up or sign in to use Kipu.
+              </li>
+              <li>
+                <strong>Voice, receipts and import on your device</strong>
+                Speech recognition, receipt reading and bank statement import
+                are processed on the device. Audio and images are neither stored
+                nor sent.
+              </li>
+              <li>
+                <strong>Google Play handles purchases</strong>
+                Kipu talks to Google Play to check, buy or restore Premium. Your
+                transactions are never part of that communication.
+              </li>
+              <li>
+                <strong>You decide which copies leave</strong>
+                The only full copy of your data that can leave the device is the
+                one you export and share. Android's automatic backup is turned
+                off for Kipu.
+              </li>
+              <li>
+                <strong>You can delete everything</strong>
+                You can delete all data from Settings. Copies you saved outside
+                Kipu are yours to delete (section 12).
+              </li>
+            </ul>
           </section>
+
           <section id="s02" aria-labelledby="h-s02">
-            <h2 id="h-s02"><span class="snum">02</span> Controller</h2>
-            <p>The controller responsible for the application and for the processing described in this document is:</p>
+            <h2 id="h-s02"><span class="snum">02</span> Data controller</h2>
+            <p>
+              The party responsible for the app and for the processing described
+              in this document is:
+            </p>
             <ul>
               <li>Legal identity: <span class="pending">[LEGAL NAME PENDING]</span></li>
               <li>Address: <span class="pending">[ADDRESS PENDING]</span></li>
-              <li>Privacy contact email: <span class="pending">[PRIVACY CONTACT EMAIL PENDING]</span></li>
-              <li>Applicable law: <span class="pending">[JURISDICTION PENDING]</span></li>
+              <li>Contact email: <span class="pending">[CONTACT EMAIL PENDING]</span></li>
+              <li>Governing law: <span class="pending">[JURISDICTION PENDING]</span></li>
             </ul>
-            <p>“Kipu” is the application’s commercial name and does not replace the controller’s legal identity.</p>
+            <p>
+              "Kipu" is the app's trade name and does not replace the
+              controller's legal identity.
+            </p>
           </section>
+
           <section id="s03" aria-labelledby="h-s03">
             <h2 id="h-s03"><span class="snum">03</span> Scope of this policy</h2>
             <p>This policy applies to:</p>
             <ul>
-              <li>the Kipu application for Android;</li>
-              <li>this website, which only publishes legal information.</li>
+              <li>the Kipu app for Android, distributed on Google Play;</li>
+              <li>
+                this website, which only publishes legal information and uses no
+                cookies, analytics or forms.
+              </li>
             </ul>
-            <p>It does not apply to third-party services you may use together with Kipu, such as the app store or the messaging service used to share a backup, which are governed by their own policies.</p>
-            <p>Kipu is not offered as a cloud service and does not have a public web version. The project repository includes configuration for other platforms; if any were distributed, this policy would be updated before publication.</p>
+            <p>
+              It does not apply to third-party services you use together with
+              Kipu —for example, Google Play or the app you share a backup
+              with—, which are governed by their own policies.
+            </p>
+            <p>
+              Kipu is not offered as a cloud service and has no public web
+              version. The project includes configuration for other platforms;
+              if Kipu were distributed on any of them, this policy would be
+              updated first.
+            </p>
           </section>
+
           <section id="s04" aria-labelledby="h-s04">
             <h2 id="h-s04"><span class="snum">04</span> Information Kipu handles</h2>
-            <p>Kipu handles only the information you enter. It does not build advertising profiles, read information from other apps on your device or obtain device identifiers for tracking.</p>
+            <p>
+              Kipu handles the information you enter, dictate, scan or import. It
+              does not build advertising profiles, does not read data from other
+              apps and does not collect device identifiers for tracking.
+            </p>
+
             <table class="table">
-              <caption>The last column distinguishes local storage from actual transmission of data.</caption>
+              <caption>
+                The "Leaves the device?" column separates local storage from
+                actual data transmission.
+              </caption>
               <thead>
                 <tr>
                   <th scope="col">Data</th>
                   <th scope="col">Examples</th>
                   <th scope="col">Where it is stored</th>
                   <th scope="col">Purpose</th>
-                  <th scope="col">Does it leave the device?</th>
+                  <th scope="col">Leaves the device?</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td data-label="Data">Book name</td>
-                  <td data-label="Examples">The name you write when setting up your profile</td>
+                  <td data-label="Data">Books</td>
+                  <td data-label="Examples">
+                    Name, type (Personal or Business) and base currency
+                  </td>
                   <td data-label="Where it is stored">Local database (SQLite)</td>
-                  <td data-label="Purpose">Identify your book inside the app</td>
-                  <td data-label="Does it leave the device?">No, unless you export a backup (section 09)</td>
+                  <td data-label="Purpose">
+                    Keep your personal and business finances apart
+                  </td>
+                  <td data-label="Leaves the device?">
+                    No, unless you export a backup (section 11)
+                  </td>
                 </tr>
                 <tr>
-                  <td data-label="Data">Financial accounts</td>
-                  <td data-label="Examples">Name, type (cash, bank, card), opening balance and start date</td>
+                  <td data-label="Data">Accounts</td>
+                  <td data-label="Examples">
+                    Name, type (cash, bank, card), opening balance and start date
+                  </td>
                   <td data-label="Where it is stored">Local database (SQLite)</td>
-                  <td data-label="Purpose">Calculate balances and net worth</td>
-                  <td data-label="Does it leave the device?">No (see section 09)</td>
+                  <td data-label="Purpose">Calculate balances</td>
+                  <td data-label="Leaves the device?">No (see section 11)</td>
                 </tr>
                 <tr>
-                  <td data-label="Data">Transactions</td>
-                  <td data-label="Examples">Amount, currency, type (income or expense), date, title and note</td>
+                  <td data-label="Data">Transactions and transfers</td>
+                  <td data-label="Examples">
+                    Amount, currency, type, date, title, note, account and
+                    category. Imported ones also keep the statement description
+                    and reference, and a fingerprint to detect duplicates
+                  </td>
                   <td data-label="Where it is stored">Local database (SQLite)</td>
-                  <td data-label="Purpose">Financial record, totals and charts</td>
-                  <td data-label="Does it leave the device?">No (see section 09)</td>
-                </tr>
-                <tr>
-                  <td data-label="Data">Transfers</td>
-                  <td data-label="Examples">Source and destination account, amount, date and note</td>
-                  <td data-label="Where it is stored">Local database (SQLite)</td>
-                  <td data-label="Purpose">Reflect movements between your own accounts</td>
-                  <td data-label="Does it leave the device?">No (see section 09)</td>
+                  <td data-label="Purpose">
+                    Financial record, totals, statistics and duplicate detection
+                  </td>
+                  <td data-label="Leaves the device?">No (see section 11)</td>
                 </tr>
                 <tr>
                   <td data-label="Data">Categories</td>
-                  <td data-label="Examples">Name, type, parent category and deductible flag</td>
+                  <td data-label="Examples">
+                    Name, type, parent category and tax-deductible flag
+                  </td>
                   <td data-label="Where it is stored">Local database (SQLite)</td>
                   <td data-label="Purpose">Classify transactions</td>
-                  <td data-label="Does it leave the device?">No (see section 09)</td>
+                  <td data-label="Leaves the device?">No (see section 11)</td>
                 </tr>
                 <tr>
                   <td data-label="Data">Reminders</td>
-                  <td data-label="Examples">Title, amount, currency, recurrence and next date</td>
-                  <td data-label="Where it is stored">Local database and system notifications</td>
-                  <td data-label="Purpose">Warn you about upcoming or overdue payments</td>
-                  <td data-label="Does it leave the device?">The title may be shown in the device notification</td>
+                  <td data-label="Examples">
+                    Title, amount, currency, recurrence and next date
+                  </td>
+                  <td data-label="Where it is stored">
+                    Local database and system notifications
+                  </td>
+                  <td data-label="Purpose">Alert you to upcoming payments and collections</td>
+                  <td data-label="Leaves the device?">
+                    No; the title may be visible in the notification
+                  </td>
                 </tr>
                 <tr>
                   <td data-label="Data">Shopping lists</td>
-                  <td data-label="Examples">List title, products, estimated amount and priority</td>
+                  <td data-label="Examples">
+                    Title, items, estimated amount and priority
+                  </td>
                   <td data-label="Where it is stored">Local database (SQLite)</td>
-                  <td data-label="Purpose">Plan purchases and create the corresponding expense</td>
-                  <td data-label="Does it leave the device?">No (see section 09)</td>
+                  <td data-label="Purpose">
+                    Plan purchases and create the matching expense
+                  </td>
+                  <td data-label="Leaves the device?">No (see section 11)</td>
+                </tr>
+                <tr>
+                  <td data-label="Data">Import history</td>
+                  <td data-label="Examples">
+                    File name, account, currency, number of transactions, opening
+                    and closing balances, and import date
+                  </td>
+                  <td data-label="Where it is stored">Local database (SQLite)</td>
+                  <td data-label="Purpose">Show and undo each import</td>
+                  <td data-label="Leaves the device?">No (see section 11)</td>
+                </tr>
+                <tr>
+                  <td data-label="Data">Classification rules</td>
+                  <td data-label="Examples">
+                    Words from descriptions linked to a category you chose before
+                  </td>
+                  <td data-label="Where it is stored">Local database (SQLite)</td>
+                  <td data-label="Purpose">Suggest categories when importing</td>
+                  <td data-label="Leaves the device?">No (see section 11)</td>
+                </tr>
+                <tr>
+                  <td data-label="Data">PIN and fingerprint unlock</td>
+                  <td data-label="Examples">
+                    A salted hash derived from the PIN, failed attempts and
+                    whether fingerprint unlock is on
+                  </td>
+                  <td data-label="Where it is stored">Android secure storage</td>
+                  <td data-label="Purpose">Lock access to the app</td>
+                  <td data-label="Leaves the device?">
+                    No; it is not included in exported backups either
+                  </td>
                 </tr>
                 <tr>
                   <td data-label="Data">Preferences</td>
-                  <td data-label="Examples">Colour theme, whether you saw the introduction and your active book</td>
-                  <td data-label="Where it is stored">System preferences (private app storage)</td>
+                  <td data-label="Examples">
+                    Theme, active book and whether you saw the welcome screens
+                    and the tour
+                  </td>
+                  <td data-label="Where it is stored">App private preferences</td>
                   <td data-label="Purpose">Remember your settings</td>
-                  <td data-label="Does it leave the device?">No</td>
+                  <td data-label="Leaves the device?">No</td>
                 </tr>
                 <tr>
-                  <td data-label="Data">Subscription state</td>
-                  <td data-label="Examples">Whether the Premium purchase is active on this device</td>
-                  <td data-label="Where it is stored">System preferences (private app storage)</td>
-                  <td data-label="Purpose">Unlock paid features</td>
-                  <td data-label="Does it leave the device?">No; the payment is processed by the app store (section 08)</td>
+                  <td data-label="Data">Premium status</td>
+                  <td data-label="Examples">
+                    Whether the Premium purchase is active on this device
+                  </td>
+                  <td data-label="Where it is stored">App private preferences</td>
+                  <td data-label="Purpose">Enable paid features</td>
+                  <td data-label="Leaves the device?">
+                    No; Google Play processes the payment (section 08)
+                  </td>
                 </tr>
                 <tr>
-                  <td data-label="Data">Backup</td>
-                  <td data-label="Examples">JSON file with the complete contents of the database</td>
-                  <td data-label="Where it is stored">App storage and the destination you choose when sharing</td>
-                  <td data-label="Purpose">Portability and safekeeping</td>
-                  <td data-label="Does it leave the device?">Yes, only when you decide to share it (section 09)</td>
+                  <td data-label="Data">Backups</td>
+                  <td data-label="Examples">
+                    JSON file with the contents of the database
+                  </td>
+                  <td data-label="Where it is stored">
+                    App private storage and the destination you choose when
+                    sharing
+                  </td>
+                  <td data-label="Purpose">Backup and moving to a new device</td>
+                  <td data-label="Leaves the device?">
+                    Yes, only when you choose to share it (section 11)
+                  </td>
                 </tr>
               </tbody>
             </table>
-            <h3>Information Kipu does not request</h3>
-            <p>Kipu does not request or store email address, phone number, postal address, identity document, contacts, location, photos, camera, microphone or health data. It does not request a date of birth.</p>
+
+            <h3>Information Kipu does not ask for</h3>
+            <p>
+              Kipu does not ask for your email address, phone number, postal
+              address, ID document, date of birth, contacts, location or health
+              data. It has no general access to your camera or photos: it only
+              receives the photo you take or the image you pick when you scan a
+              receipt (section 07).
+            </p>
+
+            <div class="note note--info">
+              <strong>Other people's data.</strong> Bank statements and receipts
+              may include names of merchants or people, tax ID numbers or
+              transaction references. If you import or confirm them, they are
+              stored in your transactions like any other data you type.
+            </div>
+
             <div class="note">
-              <strong>Note about the data schema.</strong> The database includes tables for clients (name and contact detail) and invoices that have no input screen in this version of the app. If they are enabled, this policy will be updated before publication, as those fields could contain third-party data.
+              <strong>A note on the data schema.</strong> The database includes
+              client tables (name and contact detail) and invoice tables that, in
+              this version, <em>have no data-entry screen in the app</em>. If
+              they were enabled, this policy would be updated first, because
+              those fields could contain third-party data.
             </div>
           </section>
+
           <section id="s05" aria-labelledby="h-s05">
             <h2 id="h-s05"><span class="snum">05</span> Purposes of processing</h2>
-            <p>Your information is used only to:</p>
+            <p>Information is used only to:</p>
             <ul>
               <li>show your accounts, balances, transactions and reminders;</li>
-              <li>calculate totals, charts and projections from your own data, on the device;</li>
-              <li>schedule and show payment reminders;</li>
-              <li>remember your usage preferences;</li>
-              <li>manage the purchase and restoration of the subscription;</li>
-              <li>create the backup when you request it and restore it when you decide.</li>
+              <li>
+                calculate totals, statistics and comparisons from your own data,
+                on the device;
+              </li>
+              <li>
+                turn what you dictate, scan or import into transactions you
+                review before saving;
+              </li>
+              <li>detect possible duplicates and suggest categories;</li>
+              <li>schedule and show payment and collection reminders;</li>
+              <li>protect access to the app with a PIN or fingerprint;</li>
+              <li>remember your preferences;</li>
+              <li>handle the purchase and restoration of Premium;</li>
+              <li>
+                create a backup when you ask for one and restore it when you
+                decide to.
+              </li>
             </ul>
-            <p>Kipu does not use your data for advertising, commercial profiling, sale to third parties or the creation of profiles on servers.</p>
+            <p>
+              Kipu does not use your data for advertising, commercial profiling
+              or sale to third parties.
+            </p>
           </section>
+
           <section id="s06" aria-labelledby="h-s06">
-            <h2 id="h-s06"><span class="snum">06</span> Local storage and offline operation</h2>
-            <p>All financial information is stored in a SQLite database inside the application's private storage. Under normal use, other apps on the device cannot read that file.</p>
+            <h2 id="h-s06"><span class="snum">06</span> Local storage and offline use</h2>
+            <p>
+              Financial information is stored in an SQLite database inside the
+              app's private storage. Under normal use, other apps on the device
+              cannot read that file.
+            </p>
             <ul>
-              <li>Data persists across restarts of the device and is kept until you delete it or uninstall the application.</li>
-              <li>Recording and consulting information work without an internet connection.</li>
-              <li>A connection is only needed to purchase or restore the subscription, and for backups managed by the operating system.</li>
+              <li>Data is kept until you delete it or uninstall the app.</li>
+              <li>
+                Recording, browsing, statistics, voice entry, receipt scanning
+                and statement import work without an Internet connection.
+              </li>
+              <li>
+                A connection is only involved in the Google Play operations
+                described in section 08.
+              </li>
             </ul>
           </section>
+
           <section id="s07" aria-labelledby="h-s07">
-            <h2 id="h-s07"><span class="snum">07</span> Communications and transmission of information</h2>
-            <p>The code of Kipu contains no calls to servers of our own and sends no financial information to external services. There is no synchronisation between devices, no cloud backup by Kipu and no usage telemetry.</p>
-            <p>There are three situations involving network communication. None of them transmits your transactions, balances, accounts or reminders:</p>
-            <ol>
-              <li><strong>Purchase or restoration of the subscription.</strong> Kipu queries the app store for the product identifier and the information needed to process the payment. The store receives that data and the outcome of the operation; Kipu only stores whether the purchase is active.</li>
-              <li><strong>Operating system backup.</strong> If Android backup is enabled, the system may back up the private data of applications, including the Kipu database, to your Google account. That backup is controlled by the operating system and by Google, not by Kipu, and you can disable it in your device settings.</li>
-              <li><strong>Browser builds (not published).</strong> Browser builds, which today are used only for internal validation and are not distributed, load resources of the Flutter engine from Google servers.</li>
-            </ol>
-            <p><strong>Network permission.</strong> The application declares internet access because it is required by the Google Play purchase component. Kipu does not use that permission to send financial information.</p>
+            <h2 id="h-s07"><span class="snum">07</span> Voice, receipts and bank statement import</h2>
+            <p>
+              These three features turn information into transactions. In every
+              case you see a draft and decide what to save. Nothing is sent off
+              the device.
+            </p>
+
+            <h3>Speech recognition</h3>
+            <ul>
+              <li>
+                The microphone is used only after you tap the voice button and
+                while you record (up to 15 seconds). Android asks for permission
+                the first time.
+              </li>
+              <li>
+                Audio stays in the device's memory during recording and
+                transcription. It is not written to files or sent anywhere.
+              </li>
+              <li>
+                Transcription runs on the device with the <em>sherpa-onnx</em>
+                engine and the Spanish <em>NVIDIA NeMo FastConformer</em> model
+                (CC BY 4.0 license), which ships with the app. No speech service
+                from Google, the device maker or any third party is used.
+              </li>
+              <li>
+                The first time, Kipu copies the model (about 130 MB) to its
+                private storage and checks its integrity. That copy contains no
+                personal data and needs no connection.
+              </li>
+              <li>
+                Only the transaction you confirm is saved, not the audio or the
+                transcript.
+              </li>
+            </ul>
+
+            <h3>Receipt scanning</h3>
+            <ul>
+              <li>
+                You can take a photo with the system camera app or pick an image.
+                Kipu does not request the camera permission: Android takes the
+                photo and hands Kipu only that image.
+              </li>
+              <li>
+                Text is recognized on the device with <em>Tesseract OCR</em> and
+                a Spanish language model included in the app.
+              </li>
+              <li>
+                Kipu suggests details such as merchant, date, amounts, taxes, RUC
+                number (Peruvian tax ID), items and payment method. You can
+                correct them, and only what you confirm is saved.
+              </li>
+              <li>
+                The image is not kept: the file handed over by the system and the
+                temporary files are deleted when reading finishes, is cancelled
+                or fails. If the system closed the app while you were using the
+                camera, a temporary file could remain in Kipu's private cache,
+                which Android may delete.
+              </li>
+            </ul>
+
+            <h3>Bank statement import</h3>
+            <ul>
+              <li>
+                You can import CSV, Excel (XLSX) or text-based PDF files that you
+                pick with the system file picker. Compatibility depends on the
+                bank and the file format.
+              </li>
+              <li>
+                Kipu <strong>does not connect to your bank</strong> and does not
+                ask for your banking credentials. If the PDF has a password, it
+                is used only to open the file and is not stored.
+              </li>
+              <li>
+                The content is processed in memory. Before importing, you review
+                the detected transactions and possible duplicates. Kipu saves
+                the transactions you confirm, a record of the import and, where
+                relevant, rules to suggest categories.
+              </li>
+              <li>
+                Kipu does not keep the imported file. Android's file picker may
+                leave a temporary copy in the app's private cache; Android may
+                delete it, and it disappears when you uninstall Kipu or clear its
+                storage.
+              </li>
+              <li>You can undo an entire import from the import history.</li>
+            </ul>
           </section>
+
           <section id="s08" aria-labelledby="h-s08">
-            <h2 id="h-s08"><span class="snum">08</span> Third parties and external services</h2>
-            <p>Kipu does not integrate analytics, advertising, crash reporting or tracking services. Only the following third parties are involved:</p>
+            <h2 id="h-s08"><span class="snum">08</span> Network communication</h2>
+            <p>
+              Kipu's code does not talk to any servers of its own and does not
+              send financial information to external services. There is no sync,
+              no Kipu cloud backup, no advertising, analytics, crash reporting or
+              telemetry.
+            </p>
+            <p>
+              Even so, the app is not fully cut off from the network. These are
+              the known cases, and none of them transmits your transactions,
+              balances, accounts or reminders:
+            </p>
+            <ol>
+              <li>
+                <strong>Google Play Billing.</strong> When the app opens, Kipu
+                connects to the Google Play billing service on the device to
+                learn the status of your purchases. When you buy or restore
+                Premium, Google Play processes the operation with your Google
+                account and transaction details. Kipu only stores whether Premium
+                is active.
+              </li>
+              <li>
+                <strong>Components of the Google Play library.</strong> The
+                Google billing library included in the app bundles Google
+                components that declare the Internet and network-state
+                permissions, and that Google may use to send technical
+                information about how billing works. Kipu adds no financial data
+                to that information and does not receive it.
+              </li>
+              <li>
+                <strong>Files you share.</strong> When you share a backup, the
+                app you choose (for example, email or messaging) sends it,
+                according to its own policy.
+              </li>
+            </ol>
+            <p>
+              Speech recognition, receipt reading and statement import do not
+              use the network.
+            </p>
+          </section>
+
+          <section id="s09" aria-labelledby="h-s09">
+            <h2 id="h-s09"><span class="snum">09</span> Third-party services and providers</h2>
+            <p>
+              Kipu does not integrate analytics, advertising, crash reporting or
+              tracking services. The following third parties are involved:
+            </p>
+
             <table class="table">
-              <caption>Kipu has no contractual relationship with the recipients you choose when sharing a backup.</caption>
+              <caption>
+                Kipu has no contractual relationship with the recipients you
+                choose when sharing a backup.
+              </caption>
               <thead>
                 <tr>
                   <th scope="col">Provider</th>
                   <th scope="col">Service</th>
                   <th scope="col">Information involved</th>
                   <th scope="col">When</th>
-                  <th scope="col">Where it is handled</th>
+                  <th scope="col">Where it is processed</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td data-label="Provider">Google Play (Google LLC)</td>
-                  <td data-label="Service">In-app purchases</td>
-                  <td data-label="Information">Transaction data and the user's Google account; product identifier</td>
-                  <td data-label="When">When buying, restoring or querying the subscription</td>
-                  <td data-label="Where it is handled">Google servers, under its <a href="https://policies.google.com/privacy" rel="noopener external">privacy policy</a></td>
+                  <td data-label="Service">
+                    In-app purchases and its billing library
+                  </td>
+                  <td data-label="Information">
+                    Transaction and Google account details; product identifier;
+                    technical information from the library
+                  </td>
+                  <td data-label="When">
+                    When Kipu opens and when you buy or restore Premium
+                  </td>
+                  <td data-label="Where it is processed">
+                    Google services, under its
+                    <a
+                      href="https://policies.google.com/privacy"
+                      rel="noopener external"
+                      >privacy policy</a
+                    >
+                  </td>
                 </tr>
                 <tr>
-                  <td data-label="Provider">Android operating system (Google)</td>
-                  <td data-label="Service">Device backup</td>
-                  <td data-label="Information">Private application data, including the local database</td>
-                  <td data-label="When">Automatically, only if the user has that feature enabled</td>
-                  <td data-label="Where it is handled">The user's Google account, under its configuration and policies</td>
+                  <td data-label="Provider">Android</td>
+                  <td data-label="Service">
+                    Camera, file picker, notifications, biometric unlock and
+                    share menu
+                  </td>
+                  <td data-label="Information">
+                    The image or file you choose, notification text and the
+                    fingerprint check
+                  </td>
+                  <td data-label="When">Only when you use those features</td>
+                  <td data-label="Where it is processed">
+                    On your device. Kipu never receives your biometric data
+                  </td>
                 </tr>
                 <tr>
-                  <td data-label="Provider">Recipient chosen by the user</td>
-                  <td data-label="Service">Sharing a file</td>
+                  <td data-label="Provider">Recipient you choose</td>
+                  <td data-label="Service">File sharing</td>
                   <td data-label="Information">Full contents of the backup</td>
-                  <td data-label="When">Only when the user chooses to export and share</td>
-                  <td data-label="Where it is handled">The application or service selected by the user</td>
+                  <td data-label="When">Only when you decide to export and share</td>
+                  <td data-label="Where it is processed">
+                    The app or service you select
+                  </td>
                 </tr>
               </tbody>
             </table>
-            <p>Links to third-party policies are external and open outside this site.</p>
+
+            <p>
+              The open-source components that process your information
+              —sherpa-onnx with the NVIDIA NeMo model for voice, Tesseract for
+              receipts and PDFium for PDFs— run inside the app and do not send
+              data to their authors.
+            </p>
           </section>
-          <section id="s09" aria-labelledby="h-s09">
-            <h2 id="h-s09"><span class="snum">09</span> Backups, export and import</h2>
-            <p>A backup is created only when you request it from Settings. Kipu does not send the file to any server.</p>
-            <h3>What the backup contains</h3>
-            <p>The backup is a JSON file containing:</p>
+
+          <section id="s10" aria-labelledby="h-s10">
+            <h2 id="h-s10"><span class="snum">10</span> Android permissions</h2>
+            <p>
+              These are the permissions in the version of Kipu published on
+              Google Play:
+            </p>
+
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">Permission</th>
+                  <th scope="col">Purpose</th>
+                  <th scope="col">When it is used</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-label="Permission">Microphone (<code>RECORD_AUDIO</code>)</td>
+                  <td data-label="Purpose">Record transactions by voice</td>
+                  <td data-label="When it is used">
+                    Only while you record; requested the first time
+                  </td>
+                </tr>
+                <tr>
+                  <td data-label="Permission">Notifications (<code>POST_NOTIFICATIONS</code>) and vibration (<code>VIBRATE</code>)</td>
+                  <td data-label="Purpose">Reminder alerts</td>
+                  <td data-label="When it is used">
+                    When a reminder is due; you can turn them off in Android
+                  </td>
+                </tr>
+                <tr>
+                  <td data-label="Permission">Biometrics (<code>USE_BIOMETRIC</code>, <code>USE_FINGERPRINT</code>)</td>
+                  <td data-label="Purpose">Unlock Kipu with your fingerprint</td>
+                  <td data-label="When it is used">
+                    Only if you turn on the lock and fingerprint unlock
+                  </td>
+                </tr>
+                <tr>
+                  <td data-label="Permission">Google Play billing (<code>BILLING</code>)</td>
+                  <td data-label="Purpose">Buy and restore Premium</td>
+                  <td data-label="When it is used">Section 08</td>
+                </tr>
+                <tr>
+                  <td data-label="Permission">Internet and network state (<code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>)</td>
+                  <td data-label="Purpose">
+                    Added by the Google Play billing library
+                  </td>
+                  <td data-label="When it is used">
+                    Kipu's code does not use them (section 08)
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <p>
+              Android also adds an internal permission that protects the app's
+              own message receivers and grants access to no data. Kipu does not
+              request camera, location, contacts, phone or general storage
+              permissions.
+            </p>
+          </section>
+
+          <section id="s11" aria-labelledby="h-s11">
+            <h2 id="h-s11"><span class="snum">11</span> Backups, export and restore</h2>
+
+            <h3>Backups you export</h3>
+            <p>
+              A backup is created only when you request it from Settings. Kipu
+              does not send it to any server. It is a JSON file with books,
+              accounts, categories, transactions, transfers, reminders, shopping
+              lists, currencies, exchange rates, import history, classification
+              rules and the client and invoice tables (usually empty). It does
+              not include your PIN.
+            </p>
             <ul>
-              <li>books and their base currencies;</li>
-              <li>accounts, categories, transactions and transfers;</li>
-              <li>reminders and their dates;</li>
-              <li>shopping lists and their items;</li>
-              <li>exchange rates and currencies;</li>
-              <li>client and invoice tables, which have no input screen in this version and are normally empty.</li>
+              <li>
+                <strong>The file is neither encrypted nor signed.</strong> Anyone
+                or any app that obtains it can read its contents.
+              </li>
+              <li>
+                Besides the copy you share, Kipu keeps the file in its private
+                storage with a name similar to
+                <code>mi_wallet_backup_&lt;number&gt;.json</code> and does not
+                delete it automatically.
+              </li>
+              <li>
+                When you share it, the file is handed to the app or service you
+                choose. From then on, that service's policy applies.
+              </li>
             </ul>
-            <h3>What you should know</h3>
-            <ul>
-              <li><strong>The file is not encrypted or digitally signed.</strong> Anyone or any app that obtains it can read its full contents.</li>
-              <li>In addition to the copy you share, the app keeps another copy in its private storage with a name like <code>mi_wallet_backup_&lt;number&gt;.json</code>. Kipu does not delete it automatically.</li>
-              <li>When you share it, the file is handed to the app or service you choose (for example messaging or email). From that moment it is governed by that service's policy.</li>
-              <li>Total deletion of Kipu data does not delete these exported files or any copies you have shared.</li>
-            </ul>
-            <h3>Import and restoration</h3>
-            <p>When importing a file, Kipu validates its entire structure before modifying the database. If validation fails, no data is changed. If it is valid, the backup <strong>replaces all current information</strong>. The imported file is not deleted from its original location.</p>
+
+            <h3>Restore</h3>
+            <p>
+              When restoring a file, Kipu checks its whole structure before
+              changing the database. If validation fails, no data is changed. If
+              it is valid, the backup
+              <strong>replaces all current information</strong>. The file is not
+              removed from its original location.
+            </p>
+
+            <h3>Android automatic backup and device-to-device transfer</h3>
+            <p>
+              Since version 1.0.4, Kipu excludes its database, preferences and
+              files from Android's automatic backup to your Google account and
+              from direct device-to-device transfer. To move your data to another
+              device, export a backup and restore it there.
+            </p>
+            <div class="note note--warn">
+              <strong>Earlier versions.</strong> Test versions before 1.0.4
+              allowed Android's automatic backup. If you had it turned on, an
+              older Kipu backup may exist in your Google account. Google manages
+              that backup, and you can review or delete it from the backup
+              settings of your Google account.
+            </div>
+
             <div class="note">
-              <strong>Recommendation.</strong> Keep backups in a safe place, share them only through trusted channels and delete the ones you no longer need.
+              <strong>Recommendation.</strong> Keep backups somewhere safe,
+              share them only through trusted channels and delete the ones you no
+              longer need.
             </div>
           </section>
-          <section id="s10" aria-labelledby="h-s10">
-            <h2 id="h-s10"><span class="snum">10</span> Retention and deletion of data</h2>
-            <p>Data is kept on your device while the app is installed and until you delete it. Kipu keeps no copies on its own servers.</p>
-            <h3>What you can delete from the app</h3>
-            <ul>
-              <li>transactions, one by one;</li>
-              <li>transfers;</li>
-              <li>reminders, which also cancel their notification;</li>
-              <li>categories, together with their subcategories; transactions that used them become uncategorised;</li>
-              <li>shopping lists and their items; expenses already created are kept as history.</li>
-            </ul>
-            <h3>Total deletion of data</h3>
+
+          <section id="s12" aria-labelledby="h-s12">
+            <h2 id="h-s12"><span class="snum">12</span> Data retention and deletion</h2>
             <p>
-              Kipu includes an option in Settings → Data & security →
-              “Delete all data”. When you confirm it, the app:
+              Data is kept on your device while the app is installed and you have
+              not deleted it. Kipu keeps no copies on servers of its own.
+            </p>
+
+            <h3>What you can delete in the app</h3>
+            <ul>
+              <li>transactions and transfers;</li>
+              <li>reminders, which also cancels their notification;</li>
+              <li>
+                categories you created, together with their subcategories;
+                transactions that used them become uncategorized;
+              </li>
+              <li>
+                shopping lists and their items; expenses already created are
+                kept;
+              </li>
+              <li>
+                entire imports, from the import history, together with the
+                transactions they added;
+              </li>
+              <li>learned classification rules.</li>
+            </ul>
+
+            <h3>Delete all data</h3>
+            <p>
+              Go to Settings → Data and security → "Eliminar todos los datos"
+              (Delete all data). When you confirm, Kipu:
             </p>
             <ul>
               <li>
                 deletes books, accounts, transactions, transfers, categories,
-                clients, invoices, reminders, shopping lists and other local
-                records;
+                reminders, shopping lists, import history, classification rules,
+                exchange rates, clients and invoices;
               </li>
               <li>cancels scheduled notifications;</li>
-              <li>resets the onboarding and navigation state;</li>
-              <li>
-                keeps the colour theme preference and the local Premium
-                indicator;
-              </li>
-              <li>
-                keeps backup files exported previously and any copy saved
-                outside the app.
-              </li>
+              <li>erases the PIN, failed attempts and the fingerprint preference;</li>
+              <li>resets the initial setup, the welcome screens and the tour;</li>
+              <li>keeps only the theme preference and the local Premium flag.</li>
             </ul>
             <p>
-              The operation runs as a transaction: if an error occurs, the
+              The database deletion is transactional: if an error occurs, the
               database keeps its previous state. If a later step fails, the app
-              reports that the result is partial and allows retrying.
+              reports a partial result and lets you try again.
             </p>
-            <p>
-              Total deletion does not cancel purchases or subscriptions managed
-              by Google Play. The Premium right can be checked or restored
-              through the app's existing mechanism.
-            </p>
-            <p>
-              The operation does not delete copies managed by Android Auto Backup
-              or files shared with other services; those copies follow the
-              lifecycle of Android and of the service that received them.
-            </p>
+
+            <h3>What "Delete all data" does not remove</h3>
+            <ul>
+              <li>
+                backups saved in Kipu's private storage and any you shared or
+                saved outside the app;
+              </li>
+              <li>
+                temporary files the file picker may have left in the app's
+                private cache;
+              </li>
+              <li>the prepared copy of the voice model, which contains no personal data;</li>
+              <li>your Google Play purchases: Premium can be restored later;</li>
+              <li>
+                an Android backup created by versions before 1.0.4 (section 11).
+              </li>
+            </ul>
+
+            <h3>How to remove what remains</h3>
+            <ul>
+              <li>
+                To erase everything Kipu keeps on the device, including backups
+                saved in its private storage, use Android's option to clear the
+                app's storage (in the Kipu app info) or uninstall it.
+              </li>
+              <li>
+                Backups you shared are deleted in each app or service where they
+                are.
+              </li>
+              <li>
+                An older Android backup is deleted from the backup settings of
+                your Google account.
+              </li>
+            </ul>
 
             <h3>Current limitations</h3>
             <ul>
               <li>
-                Financial accounts you create (cash, bank, card) can be edited,
-                but not deleted individually, from the app in this version.
+                Accounts (cash, bank, card) can be edited but not deleted
+                individually in this version.
+              </li>
+              <li>Backup files cannot be deleted from the app.</li>
+            </ul>
+
+            <p>
+              There are no user accounts to delete. If you need help erasing your
+              information, write to
+              <span class="pending">[CONTACT EMAIL PENDING]</span>.
+            </p>
+          </section>
+
+          <section id="s13" aria-labelledby="h-s13">
+            <h2 id="h-s13"><span class="snum">13</span> Information security</h2>
+            <p>Measures in the current version:</p>
+            <ul>
+              <li>storage inside the app's private area;</li>
+              <li>
+                optional PIN lock: the PIN itself is not stored; a salted hash
+                (PBKDF2-HMAC-SHA256) is kept in Android secure storage, with
+                increasing wait times after several failed attempts;
               </li>
               <li>
-                Backup files are not deleted from the app, not even through total
-                deletion.
+                optional fingerprint unlock, verified by Android: Kipu never
+                receives your biometric data;
+              </li>
+              <li>
+                full validation of backups before restoring them, and
+                replacement in a single operation;
+              </li>
+              <li>receipt images and audio are deleted after processing;</li>
+              <li>
+                diagnostic logs without financial information: they only describe
+                how the voice model is prepared;
+              </li>
+              <li>no financial data is sent over the network.</li>
+            </ul>
+
+            <p>Limitations you should know about:</p>
+            <ul>
+              <li>
+                <strong>The database is not encrypted.</strong> Android's app
+                isolation protects it; the PIN locks the app but does not encrypt
+                the data.
+              </li>
+              <li><strong>Backups are not encrypted.</strong></li>
+              <li>
+                Reminder titles may be visible in notifications, including on the
+                lock screen, depending on your device settings.
               </li>
             </ul>
-            <h3>Uninstall and external files</h3>
-            <p>Uninstalling the app deletes the local database and the preferences on the device. It <strong>does not delete</strong> files you shared or saved outside the app (messaging, email, cloud storage, computer).</p>
-            <p>Operating system backups may be kept after uninstalling the app, depending on device settings and Google's policies.</p>
-            <p>There are no user accounts to delete. If you need help deleting all your information, write to <span class="pending">[PRIVACY CONTACT EMAIL PENDING]</span>.</p>
+            <p>
+              No measure removes risk entirely. Physical access to an unlocked
+              device and backups circulating through insecure channels are the
+              main exposure scenarios.
+            </p>
           </section>
-          <section id="s11" aria-labelledby="h-s11">
-            <h2 id="h-s11"><span class="snum">11</span> Security of information</h2>
-            <p>Measures implemented in the current version:</p>
-            <ul>
-              <li>storage inside the application's private area, without permissions to access external storage;</li>
-              <li>full validation of backup files before importing them, and replacement in a single operation, so that a failed restore leaves no partial data;</li>
-              <li>no logging of financial information in the application's diagnostic records;</li>
-              <li>no transmission of financial data over the network.</li>
-            </ul>
-            <p>Limitations you should be aware of:</p>
-            <ul>
-              <li><strong>The database has no additional encryption.</strong> It is a SQLite file protected by the operating system's isolation.</li>
-              <li><strong>Backups are not encrypted.</strong></li>
-              <li>The app has no password or biometric lock: anyone with the unlocked device can open it.</li>
-            </ul>
-            <p>No measure removes risk entirely. Physical access to an unlocked device and the circulation of backups through insecure channels are the main exposure scenarios.</p>
-          </section>
-          <section id="s12" aria-labelledby="h-s12">
-            <h2 id="h-s12"><span class="snum">12</span> Children's privacy</h2>
-            <p>Kipu is a personal finance tool not directed at children under 13. The app does not request a date of birth or perform age verification.</p>
-            <p>Because Kipu sends no information to the controller and creates no user accounts, no children's data is collected on servers. If a child uses the app, their information stays on the device, like that of any other person.</p>
-            <p>Parents, mothers or guardians can delete that information by uninstalling the app and deleting any backup files that were exported.</p>
-          </section>
-          <section id="s13" aria-labelledby="h-s13">
-            <h2 id="h-s13"><span class="snum">13</span> Your rights and privacy enquiries</h2>
-            <p>Because your data is on your device and not on the controller's servers, you exercise access, rectification and deletion directly in the app:</p>
-            <ul>
-              <li>access: the app screens show your data;</li>
-              <li>rectification: you can edit accounts, transactions, categories and reminders;</li>
-              <li>deletion: you can delete individual records (section 10).</li>
-            </ul>
-            <p>The controller cannot look up, export or delete your data on your behalf, because it has no access to it.</p>
-            <p>If you have a question about this policy or about the handling of information, write to <span class="pending">[PRIVACY CONTACT EMAIL PENDING]</span>. You may also file a complaint with the competent data protection authority in <span class="pending">[JURISDICTION PENDING]</span>.</p>
-          </section>
+
           <section id="s14" aria-labelledby="h-s14">
-            <h2 id="h-s14"><span class="snum">14</span> Changes to this policy</h2>
-            <p>This policy may be updated to reflect changes in the application or in the applicable rules. The current version is always published at this address, with the date of last update.</p>
-            <p>If a change is substantial, for example because a service that receives data outside the device were to be added, it will be announced on this page and in the app store listing before it takes effect.</p>
+            <h2 id="h-s14"><span class="snum">14</span> Children's privacy</h2>
+            <p>
+              Kipu is a personal finance tool not directed at children under 13.
+              The app does not ask for a date of birth or perform age checks.
+            </p>
+            <p>
+              Because Kipu sends no information to the controller and creates no
+              user accounts, no data about children is collected on servers. If a
+              child uses the app, their information stays on the device, like
+              anyone else's.
+            </p>
+            <p>
+              Parents or guardians can delete that information by following the
+              steps in section 12.
+            </p>
           </section>
+
           <section id="s15" aria-labelledby="h-s15">
-            <h2 id="h-s15"><span class="snum">15</span> Effective date</h2>
+            <h2 id="h-s15"><span class="snum">15</span> Your rights and privacy questions</h2>
+            <p>
+              Because your data is on your device and not on the controller's
+              servers, you exercise access, rectification and deletion directly
+              in the app:
+            </p>
             <ul>
-              <li>Draft last updated: November 17, 2026.</li>
-              <li>Effective date: <span class="pending">[EFFECTIVE DATE PENDING]</span></li>
+              <li>access: the app's screens show your data;</li>
+              <li>
+                rectification: you can edit accounts, transactions, categories
+                and reminders;
+              </li>
+              <li>deletion: you can delete records or all data (section 12);</li>
+              <li>portability: you can export a JSON backup (section 11).</li>
             </ul>
-            <p>This document describes practices verified in the application and is not legal advice.</p>
+            <p>
+              The controller cannot view, export or delete your data on your
+              behalf, because it has no access to it.
+            </p>
+            <p>
+              If you have a question about this policy, write to
+              <span class="pending">[CONTACT EMAIL PENDING]</span>. You may also
+              lodge a complaint with the competent data protection authority in
+              <span class="pending">[JURISDICTION PENDING]</span>.
+            </p>
           </section>
+
           <section id="s16" aria-labelledby="h-s16">
-            <h2 id="h-s16"><span class="snum">16</span> Contact</h2>
-            <p>For questions related to this policy or to the handling of information:</p>
+            <h2 id="h-s16"><span class="snum">16</span> Changes to this policy</h2>
+            <p>
+              This policy may be updated to reflect changes in the app or in
+              applicable law. The current version will always be published at
+              this address, with the date of its last update.
+            </p>
+            <p>
+              If a change is substantial —for example, if a service that receives
+              data outside the device were added—, it will be announced on this
+              page and on the Google Play listing before it takes effect.
+            </p>
+          </section>
+
+          <section id="s17" aria-labelledby="h-s17">
+            <h2 id="h-s17"><span class="snum">17</span> Effective date</h2>
             <ul>
-              <li>Email: <span class="pending">[PRIVACY CONTACT EMAIL PENDING]</span></li>
+              <li>Draft last updated: November 20, 2026.</li>
+              <li>
+                Effective date:
+                <span class="pending">[EFFECTIVE DATE PENDING]</span>
+              </li>
+            </ul>
+            <p>
+              This document describes practices verified in the app and does not
+              constitute legal advice.
+            </p>
+          </section>
+
+          <section id="s18" aria-labelledby="h-s18">
+            <h2 id="h-s18"><span class="snum">18</span> Contact</h2>
+            <p>For questions about this policy or about how information is handled:</p>
+            <ul>
+              <li>Email: <span class="pending">[CONTACT EMAIL PENDING]</span></li>
               <li>Controller: <span class="pending">[LEGAL NAME PENDING]</span></li>
               <li>Address: <span class="pending">[ADDRESS PENDING]</span></li>
             </ul>
@@ -436,20 +1117,32 @@
         </article>
       </div>
     </main>
+
     <footer class="site-footer">
       <div class="shell site-footer__inner">
         <div>
-          <p class="site-footer__brand"><img src="../../assets/images/khipu-mark.svg" alt="" width="20" height="20" /><span>Kipu</span></p>
-          <p>Privacy policy · Last updated: November 17, 2026.</p>
-          <p class="site-footer__legal">This document is not legal advice.</p>
+          <p class="site-footer__brand">
+            <img
+              src="../../assets/images/khipu-mark.svg"
+              alt=""
+              width="20"
+              height="20"
+            />
+            <span>Kipu</span>
+          </p>
+          <p>Privacy policy · Last updated: November 20, 2026.</p>
+          <p class="site-footer__legal">
+            This document does not constitute legal advice.
+          </p>
         </div>
         <nav aria-label="Site links">
           <a href="../../">Home</a>
           <a href="../es/" hreflang="es" lang="es">Español</a>
-          <a href="#s16">Contact</a>
+          <a href="#s18">Contact</a>
         </nav>
       </div>
     </footer>
+
     <script src="../../assets/js/main.js" defer></script>
   </body>
 </html>

@@ -1,33 +1,27 @@
+<!--
+  Kipu · marca (copia de KipuMark / splash; fuente: mi_wallet assets/icon/khipu_master.svg).
+  Khipu andino: una cuerda principal con tres cuerdas colgantes de distinto
+  largo y nudos. Paleta = KipuBrand (lib/app/theme/app_colors.dart):
+  tinta #12201B, hueso #F7F5EC, verde pino #00A86B, nudo ámbar #F59E0B.
+  El grupo #mark queda dentro del círculo seguro de los adaptive icons
+  (66/108 del lienzo). Regenerar con tool/generate_icons.sh.
+-->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
-  <defs>
-    <g id="mark">
-      <!-- Wallet body -->
-      <rect x="192" y="285" width="640" height="470" rx="92" fill="#F7F5EC"/>
-      <!-- Seam (wallet fold) -->
-      <line x1="236" y1="395" x2="788" y2="395" stroke="#E6DFCC" stroke-width="8" stroke-linecap="round"/>
-      <!-- Main quipu cord -->
-      <line x1="262" y1="355" x2="762" y2="355" stroke="#2F3A4F" stroke-width="20" stroke-linecap="round"/>
-      <!-- Pendant cords: emerald / indigo alternating -->
-      <line x1="342" y1="355" x2="342" y2="700" stroke="#0B5D3B" stroke-width="16" stroke-linecap="round"/>
-      <line x1="452" y1="355" x2="452" y2="700" stroke="#4338CA" stroke-width="16" stroke-linecap="round"/>
-      <line x1="512" y1="355" x2="512" y2="700" stroke="#0B5D3B" stroke-width="16" stroke-linecap="round"/>
-      <line x1="572" y1="355" x2="572" y2="700" stroke="#4338CA" stroke-width="16" stroke-linecap="round"/>
-      <line x1="682" y1="355" x2="682" y2="700" stroke="#0B5D3B" stroke-width="16" stroke-linecap="round"/>
-      <!-- Knots (amber) -->
-      <circle cx="342" cy="420" r="26" fill="#F59E0B"/>
-      <circle cx="342" cy="540" r="26" fill="#F59E0B"/>
-      <circle cx="342" cy="650" r="26" fill="#F59E0B"/>
-      <circle cx="452" cy="450" r="26" fill="#F59E0B"/>
-      <circle cx="452" cy="590" r="26" fill="#F59E0B"/>
-      <circle cx="512" cy="400" r="26" fill="#F59E0B"/>
-      <circle cx="512" cy="520" r="26" fill="#F59E0B"/>
-      <circle cx="512" cy="660" r="26" fill="#F59E0B"/>
-      <circle cx="572" cy="470" r="26" fill="#F59E0B"/>
-      <circle cx="572" cy="610" r="26" fill="#F59E0B"/>
-      <circle cx="682" cy="430" r="26" fill="#F59E0B"/>
-      <circle cx="682" cy="550" r="26" fill="#F59E0B"/>
-      <circle cx="682" cy="630" r="26" fill="#F59E0B"/>
+  <rect width="1024" height="1024" rx="300" fill="#12201B"/>
+  <g id="mark" transform="translate(512 512) scale(1.45) translate(-512 -524)">
+    <g stroke="#F7F5EC" stroke-linecap="round">
+      <line x1="330" y1="372" x2="694" y2="372" stroke-width="48"/>
+      <line x1="394" y1="372" x2="394" y2="612" stroke-width="34"/>
+      <line x1="512" y1="372" x2="512" y2="684" stroke-width="34"/>
+      <line x1="630" y1="372" x2="630" y2="560" stroke-width="34"/>
     </g>
-  </defs>
-  <use href="#mark"/>
+    <g fill="#00A86B">
+      <circle cx="394" cy="470" r="36"/>
+      <circle cx="394" cy="552" r="36"/>
+      <circle cx="512" cy="548" r="36"/>
+      <circle cx="512" cy="634" r="36"/>
+      <circle cx="630" cy="478" r="36"/>
+    </g>
+    <circle cx="512" cy="462" r="36" fill="#F59E0B"/>
+  </g>
 </svg>

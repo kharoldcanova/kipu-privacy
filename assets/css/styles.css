@@ -1,8 +1,37 @@
 /* ==========================================================================
    Kipu — Privacy site
    Identidad «Khipu»: papel hueso, tinta, cuerda verde pino y nudo ámbar.
-   Tokens derivados de la app (AppColorsLight / AppColors / KipuRadius).
+   Tokens copiados de la app (lib/app/theme/app_colors.dart: KipuBrand,
+   AppColorsLight y AppColors; kipu_tokens.dart: KipuRadius). La marca y el
+   favicon derivan de assets/icon/khipu_master.svg de la app.
    ========================================================================== */
+
+/* Plus Jakarta Sans, la tipografía de la app (SIL OFL 1.1, ver
+   assets/fonts/OFL.txt). Autoalojada: el sitio no hace solicitudes a
+   terceros. */
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("../fonts/PlusJakartaSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("../fonts/PlusJakartaSans-SemiBold.ttf") format("truetype");
+  font-weight: 500 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("../fonts/PlusJakartaSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 
 :root {
   color-scheme: light;
@@ -20,16 +49,27 @@
   --text-2: #59645f;
   --text-muted: #7a837e;
 
-  /* Marca */
+  /* Marca (KipuBrand: inmutable en ambos temas, igual que el icono) */
+  --brand-ink: #12201b;
+  --brand-bone: #f7f5ec;
+  --brand-emerald: #00a86b;
+  --brand-amber: #f59e0b;
+
+  /* Identidad y estados (AppColorsLight) */
   --pine: #0a7350;
   --pine-deep: #0b5d3b;
   --pine-soft: #ddefe6;
-  --indigo: #4f46e5;
+  --link: #0a7350;
+  --link-hover: #0b5d3b;
   --knot: #9a5b0b;
   --knot-bright: #f59e0b;
   --knot-ring: rgba(245, 158, 11, 0.18);
   --knot-soft: rgba(245, 158, 11, 0.12);
+  --info: #1d5f8c;
+  --info-soft: rgba(29, 95, 140, 0.08);
   --danger: #b4372b;
+  --danger-soft: rgba(180, 55, 43, 0.07);
+  --mark-ring: transparent;
 
   /* Forma y ritmo */
   --radius-sm: 8px;
@@ -39,8 +79,8 @@
 
   --shadow-soft: 0 1px 2px rgba(21, 32, 28, 0.04), 0 8px 24px rgba(21, 32, 28, 0.04);
 
-  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
     "Liberation Mono", monospace;
 
@@ -67,12 +107,17 @@
     --pine: #55d6a0;
     --pine-deep: #86e5bc;
     --pine-soft: #143628;
-    --indigo: #a5b4fc;
+    --link: #86e5bc;
+    --link-hover: #b4f0d6;
     --knot: #f2b544;
     --knot-bright: #f2b544;
     --knot-ring: rgba(242, 181, 68, 0.2);
     --knot-soft: rgba(242, 181, 68, 0.14);
+    --info: #7dc4f0;
+    --info-soft: rgba(125, 196, 240, 0.1);
     --danger: #ff8a7a;
+    --danger-soft: rgba(255, 138, 122, 0.1);
+    --mark-ring: #33403a;
 
     --shadow-soft: 0 1px 2px rgba(0, 0, 0, 0.4), 0 10px 28px rgba(0, 0, 0, 0.28);
   }
@@ -95,12 +140,17 @@
   --pine: #55d6a0;
   --pine-deep: #86e5bc;
   --pine-soft: #143628;
-  --indigo: #a5b4fc;
+  --link: #86e5bc;
+  --link-hover: #b4f0d6;
   --knot: #f2b544;
   --knot-bright: #f2b544;
   --knot-ring: rgba(242, 181, 68, 0.2);
   --knot-soft: rgba(242, 181, 68, 0.14);
+  --info: #7dc4f0;
+  --info-soft: rgba(125, 196, 240, 0.1);
   --danger: #ff8a7a;
+  --danger-soft: rgba(255, 138, 122, 0.1);
+  --mark-ring: #33403a;
 
   --shadow-soft: 0 1px 2px rgba(0, 0, 0, 0.4), 0 10px 28px rgba(0, 0, 0, 0.28);
 }
@@ -135,13 +185,14 @@ img {
 }
 
 a {
-  color: var(--pine-deep);
+  color: var(--link);
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
 }
 
 a:hover {
+  color: var(--link-hover);
   text-decoration-thickness: 2px;
 }
 
@@ -218,9 +269,18 @@ a:hover {
   margin-right: auto;
 }
 
+/* La marca es un cuadrado de tinta: en tema oscuro lleva un borde fino para
+   separarse del fondo, como KipuMark en la app. */
+.brand__mark,
+.hero__mark,
+.site-footer__brand img {
+  border-radius: 30%;
+  box-shadow: 0 0 0 1px var(--mark-ring);
+}
+
 .brand__mark {
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
   flex: none;
 }
 
@@ -296,8 +356,20 @@ a:hover {
 }
 
 .lang a[aria-current="page"] {
+  background: var(--brand-ink);
+  color: var(--brand-bone);
+}
+
+:root[data-theme="dark"] .lang a[aria-current="page"] {
   background: var(--pine-soft);
   color: var(--pine-deep);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .lang a[aria-current="page"] {
+    background: var(--pine-soft);
+    color: var(--pine-deep);
+  }
 }
 
 .icon-btn {
@@ -376,7 +448,7 @@ a:hover {
 }
 
 .hero__mark {
-  width: clamp(96px, 18vw, 132px);
+  width: clamp(88px, 16vw, 128px);
   height: auto;
   justify-self: start;
 }
@@ -411,41 +483,42 @@ a:hover {
   }
 }
 
-/* Cuerda decorativa: línea con nudos, motivo khipu. */
+/* Cuerda decorativa con nudos, el mismo motivo del icono y de la tarjeta de
+   saldo de la app: cuerda de texto, nudos verde y ámbar de la marca. */
 .cord {
   position: relative;
   height: 3px;
-  max-width: 220px;
+  max-width: 216px;
   margin: 28px 0 0;
-  background: linear-gradient(
-    to right,
-    var(--pine) 0%,
-    var(--pine) 55%,
-    var(--indigo) 55%,
-    var(--indigo) 100%
-  );
+  background: var(--text);
   border-radius: var(--radius-pill);
-  opacity: 0.75;
+  opacity: 0.85;
 }
 
 .cord::before,
-.cord::after {
+.cord::after,
+.cord span {
   content: "";
   position: absolute;
   top: 50%;
   width: 13px;
   height: 13px;
   border-radius: 50%;
-  background: var(--knot-bright);
-  transform: translateY(-50%);
+  background: var(--brand-emerald);
+  transform: translate(-50%, -50%);
 }
 
 .cord::before {
-  left: 18%;
+  left: 22%;
+}
+
+.cord span {
+  left: 53%;
+  background: var(--brand-amber);
 }
 
 .cord::after {
-  left: 62%;
+  left: 81%;
 }
 
 /* ------------------------------------------------- Elección de idioma ---- */
@@ -546,12 +619,51 @@ a:hover {
 }
 
 .toc__title {
-  margin: 0 0 10px;
+  margin: 0;
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--text-muted);
+}
+
+.toc__details > summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+.toc__details > summary::-webkit-details-marker {
+  display: none;
+}
+
+/* En pantallas angostas el índice se pliega; la flecha indica el estado. */
+.toc__details > summary::after {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-left: 10px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+}
+
+.toc__details[open] > summary::after {
+  transform: translateY(1px) rotate(-135deg);
+}
+
+.toc__details[open] > summary {
+  margin-bottom: 10px;
+}
+
+@media (min-width: 1000px) {
+  .toc__details > summary {
+    pointer-events: none;
+  }
+
+  .toc__details > summary::after {
+    display: none;
+  }
 }
 
 .toc ol {
@@ -691,6 +803,43 @@ a:hover {
   border: 1px solid var(--border);
   border-left: 3px solid var(--pine);
   border-radius: var(--radius-md);
+}
+
+/* Resumen en tarjetas: lo esencial de la política de un vistazo. */
+.facts {
+  display: grid;
+  gap: 12px;
+  margin: 22px 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 620px) {
+  .facts {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.facts li {
+  margin: 0;
+  padding: 16px 18px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: var(--text-2);
+}
+
+.facts strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.facts li::marker {
+  content: none;
 }
 
 .callout__title {
@@ -855,6 +1004,23 @@ a:hover {
   color: var(--text);
 }
 
+/* Avisos con significado: información (azul de la app) y advertencia
+   (nudo ámbar). */
+.note--info {
+  background: var(--info-soft);
+  border-left: 3px solid var(--info);
+}
+
+.note--warn {
+  background: var(--knot-soft);
+  border-left: 3px solid var(--knot);
+}
+
+.note--danger {
+  background: var(--danger-soft);
+  border-left: 3px solid var(--danger);
+}
+
 /* ------------------------------------------------------------ Footer ----- */
 
 .site-footer {
@@ -977,4 +1143,21 @@ a:hover {
     background: none;
     border: 1px solid #000;
   }
+}
+
+.prose .facts {
+  padding-left: 0;
+}
+
+.prose .facts li {
+  margin: 0;
+}
+
+/* Portada bilingüe: la traducción al inglés va debajo, en tono secundario. */
+.hero__lede span[lang="en"],
+.callout li span[lang="en"],
+.site-footer span[lang="en"] {
+  display: block;
+  margin-top: 4px;
+  color: var(--text-muted);
 }
